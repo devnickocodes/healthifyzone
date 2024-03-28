@@ -8,6 +8,12 @@ class Category(models.Model):
     category_slug = models.SlugField(null=False, blank=False, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
+
+    class Meta:
+        verbose_name_plural = "Categories"
+        ordering = ["-created_on"]
+
+
     def __str__(self):
 
         return f'{self.title}'
