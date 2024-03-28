@@ -17,7 +17,7 @@ class Category(models.Model):
 
     def __str__(self):
 
-        return f'{self.title}'
+        return f'Title: {self.title}'
 
 
 class Article(models.Model):
@@ -30,3 +30,11 @@ class Article(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    class Meta:
+
+        ordering = ["-created_on"]
+
+    def __str__(self):
+
+        return f'Title: {self.title}'
