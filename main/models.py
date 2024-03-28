@@ -5,8 +5,8 @@ from django.db import models
 
 class Category(models.Model):
 
-    title = models.CharField(max_length=150)
-    subtitle = models.CharField(max_length=200)
+    title = models.CharField(max_length=150, blank=False)
+    subtitle = models.CharField(max_length=200, blank=False)
     category_slug = models.SlugField(null=False, blank=False, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
@@ -22,14 +22,14 @@ class Category(models.Model):
 
 class Article(models.Model):
 
-    title = models.CharField(max_length=200, unique=True)
-    subtitle = models.CharField(max_length=200, blank=True)
+    title = models.CharField(max_length=200, blank=False)
+    subtitle = models.CharField(max_length=200, blank=False)
     article_slug = models.SlugField(null=False, blank=False, unique=True)
-    content = models.TextField()
+    content = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, null=False, on_delete=models.CASCADE)
 
     class Meta:
 
@@ -38,3 +38,4 @@ class Article(models.Model):
     def __str__(self):
 
         return f'Title: {self.title}'
+
