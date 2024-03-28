@@ -17,7 +17,7 @@ class Category(models.Model):
 
     def __str__(self):
 
-        return f'Title: {self.title}'
+        return f'Category title: {self.title}'
 
 
 class Article(models.Model):
@@ -37,7 +37,7 @@ class Article(models.Model):
 
     def __str__(self):
 
-        return f'Title: {self.title}'
+        return f'Article title: {self.title}'
 
 class Comment(models.Model):
 
