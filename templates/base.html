@@ -39,10 +39,11 @@
 
 </head>
 
-<body>
-<p>This is in base.html</p>
-{% block content%}
-{% endblock %}
+<body class="d-flex flex-column h-100 main-bg">
+<main class="flex-shrink-0">
+    {% block content %}
+    {% endblock %}
+</main>
 </body>
 
 </html>
