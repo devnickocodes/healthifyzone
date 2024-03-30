@@ -4,3 +4,11 @@ body {
     font-family: "Inter", sans-serif;
     background-color: rgb(223, 248, 223);
 }
+
+.logo{
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 5px 9px;
+    border-radius: 5px;
+    background-color: rgb(118, 209, 118);
+}
