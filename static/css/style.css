@@ -17,3 +17,7 @@ body {
     font-weight: 500;
     color: rgb(71, 126, 71);
 }
+
+.pagination-btns{
+    margin-top: 2rem;
+}
