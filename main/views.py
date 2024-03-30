@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Article
 # Create your views here.
 
-def homepage(request):
+class DisplayArticles(generic.ListView):
     
-    return HttpResponse("This is the homepage")
+    queryset = Article.objects.filter(approved=False).all()
+    template_name = 'article_list.html'
