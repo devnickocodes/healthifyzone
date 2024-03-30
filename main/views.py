@@ -5,5 +5,5 @@ from .models import Article
 
 class DisplayArticles(generic.ListView):
     
-    queryset = Article.objects.filter(approved=False).all()
+    queryset = Article.objects.filter(approved=True).all()
     template_name = 'article_list.html'
