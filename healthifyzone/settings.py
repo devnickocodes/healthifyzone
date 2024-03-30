@@ -17,6 +17,7 @@ if os.path.isfile('env.py'):
     import env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-devnickocodes-healthifyz-x331i3shha.us1.codeanyapp.com',
@@ -69,7 +70,7 @@ ROOT_URLCONF = 'healthifyzone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,3 +1,5 @@
+# pylint: disable=no-member
+# pylint: disable=missing-docstring
 from django.shortcuts import render
 from django.views import generic
 from .models import Article
