@@ -12,7 +12,7 @@ class CategoryAdmin(SummernoteModelAdmin):
 @admin.register(Article)  
 class ArticleAdmin(SummernoteModelAdmin):
     list_display = ('title', 'category', 'article_slug', 'created_on', 'approved')
-    list_filter = ('approved', 'created_on')
+    list_filter = ('approved', 'created_on', 'category')
     prepopulated_fields = {'article_slug': ('title',)}
     summernote_fields = ('content',)
 
