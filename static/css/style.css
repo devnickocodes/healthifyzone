@@ -6,9 +6,14 @@ body {
 }
 
 .logo{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 500;
     padding: 5px 9px;
     border-radius: 5px;
     background-color: rgb(118, 209, 118);
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 500;
+    color: rgb(71, 126, 71);
 }
