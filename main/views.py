@@ -5,5 +5,5 @@ from .models import Article
 
 class DisplayArticles(generic.ListView):
     
-    queryset = Article.objects.filter(approved=True).all()
+    queryset = Article.objects.filter(approved=True).order_by("-created_on")
     template_name = 'article_list.html'
