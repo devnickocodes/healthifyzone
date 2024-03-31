@@ -15,7 +15,7 @@
                         <p class="card-text">{{article.created_on}}</p>
                     </div>
                     <div class="text-center">
-                        <a href="/">
+                        <a href="{% url 'view_article' article.article_slug %}">
                             <button type="button" class="btn article-btn" data-mdb-ripple-init>View Article</button>
                         </a>
                     </div>
