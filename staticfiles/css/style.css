@@ -5,3 +5,84 @@ body {
     background-color: rgb(223, 248, 223);
 }
 
+/* Navbar Styles */
+.logo{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 5px 9px;
+    border-radius: 5px;
+    background-color: rgb(118, 209, 118);
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 500;
+    color: rgb(106, 173, 106);
+}
+
+/* Homepage Article Styles */
+
+.card{
+    border-radius: 8px;
+}
+
+.article-btn{
+    background-color: rgb(126, 221, 126);
+    font-weight: 600;
+    border: 2px solid rgb(126, 221, 126);
+}
+
+.article-btn:hover{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(126, 221, 126);
+}
+
+/* Pagination */
+#pagination-btn-prev, #pagination-btn-next{
+    background-color: rgb(30, 70, 7);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(30, 70, 7);
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#pagination-btn-prev:hover, #pagination-btn-next:hover{
+    color: rgb(30, 70, 7);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(30, 70, 7);
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+#pagination-btn-prev:focus, #pagination-btn-next:focus {
+    outline: none;
+    box-shadow: none; 
+}
+
+.pagination-nav{
+    margin-top: 4rem;
+}
+
+
+
+/* Footer */
+
+.fa-github{
+    background-color: rgb(51, 51, 51);
+    padding: 6px;
+    border-radius: 5px;
+    border: 2px solid rgb(51, 51, 51);
+
+}
+
+.fa-github:hover{
+    color: rgb(51, 51, 51);
+    background-color: rgb(226, 225, 225);
+    border: 2px solid rgb(51, 51, 51);
+}
+
+.footer-content{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
