@@ -5,6 +5,7 @@ body {
     background-color: rgb(223, 248, 223);
 }
 
+/* Navbar Styles */
 .logo{
     font-size: 1.5rem;
     font-weight: 500;
@@ -17,6 +18,8 @@ body {
     font-weight: 500;
     color: rgb(106, 173, 106);
 }
+
+/* Homepage Article Styles */
 
 .pagination-btns{
     margin-top: 2rem;
@@ -36,3 +39,4 @@ body {
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(126, 221, 126);
 }
+
