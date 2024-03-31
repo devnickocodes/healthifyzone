@@ -15,9 +15,24 @@ body {
 
 .navbar .navbar-nav .nav-link {
     font-weight: 500;
-    color: rgb(71, 126, 71);
+    color: rgb(106, 173, 106);
 }
 
 .pagination-btns{
     margin-top: 2rem;
+}
+
+.card{
+    border-radius: 8px;
+}
+
+.article-btn{
+    background-color: rgb(126, 221, 126);
+    font-weight: 600;
+    border: 2px solid rgb(126, 221, 126);
+}
+
+.article-btn:hover{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(126, 221, 126);
 }
