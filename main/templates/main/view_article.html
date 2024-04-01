@@ -1,15 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 {% load static %}
 
-<!-- Background image -->
-
-<!-- Background image -->
-
-<div class="container">
+<div class="container my-5">
     <img src="{% static 'images/placeholder.jpeg' %}" class="img-fluid" alt="...">
 </div>
-
-
   <div class="container">
       <div class="row">
               <h1 class="post-title text-center">{{ article.title }}</h1>
@@ -18,10 +12,9 @@
             <p class="post-subtitle text-center">Author here | {{ article.created_on }}</p>
     </div>
   </div>
-
 <div class="container">
   <div class="row">
-      <div class="col card mb-4  mt-3 left  top">
+      <div class="col card mb-4  mt-3 left top">
           <div class="card-body">
               <p class="card-text">
                   {{ article.content | safe }}
