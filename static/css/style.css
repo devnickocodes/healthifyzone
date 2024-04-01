@@ -27,6 +27,12 @@ body {
 
 /* Homepage Article Styles */
 
+.main-img{
+ height: 50%;
+ width: 50%;
+}
+
+
 .card{
     border-radius: 8px;
 }

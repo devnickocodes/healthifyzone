@@ -1,5 +1,6 @@
 {% load static %}
 {% url 'homepage' as homepage_url %}
+
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
@@ -77,6 +78,11 @@
   </nav>
   </header>
 <main class="flex-shrink-0">
+  <div class="container">
+    <div class="row">
+      <img src="{% static 'images/placeholder.jpeg' %}" class="img-fluid mx-auto" alt="...">
+    </div>
+  </div>
     {% block content %}
     {% endblock %}
     <script src="{% static 'js/script.js' %}"></script>
