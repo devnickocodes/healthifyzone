@@ -22,3 +22,9 @@ def view_article(request, article_slug):
         "main/view_article.html",
         {"article": article},
     )
+
+class DisplayCategories(generic.ListView):
+
+    queryset = Category.objects.filter(approved=True)
+
+    template_name = 'main/categories.html'   
