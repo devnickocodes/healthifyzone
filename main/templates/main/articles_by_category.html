@@ -1,5 +1,12 @@
 {% extends 'base.html' %} {% load static %}
 
 {% block content%}
+<h1>Articles by Category: {{ category.title }}</h1>
+<ul>
+    {% for article in articles_related_to_category %}
+        <li>{{ article.title }}</li>
+    {% endfor %}
+</ul>
+
 
 {% endblock%}
