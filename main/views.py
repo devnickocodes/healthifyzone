@@ -29,3 +29,13 @@ class DisplayCategories(generic.ListView):
 
     template_name = 'main/categories.html'
 
+
+def view_by_category(request, category_slug):
+    category = Category.objects.get(category_slug=category_slug)
+    articles_related_to_category = category.article_set.all()
+
+    return render(
+        request,
+        'main/articles_by_category.html',
+        {'articles_related_to_category': articles_related_to_category, 'category': category}
+    )
