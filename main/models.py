@@ -9,6 +9,7 @@ class Category(models.Model):
     subtitle = models.CharField(max_length=200, blank=False)
     category_slug = models.SlugField(null=False, blank=False, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
 
     class Meta:
 

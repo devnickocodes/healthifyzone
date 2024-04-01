@@ -22,3 +22,4 @@ def view_article(request, article_slug):
         "main/view_article.html",
         {"article": article},
     )
+
