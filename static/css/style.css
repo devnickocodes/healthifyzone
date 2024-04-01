@@ -19,6 +19,12 @@ body {
     color: rgb(106, 173, 106);
 }
 
+.active{
+    background-color: rgb(126, 221, 126);
+    border-radius: 5px;
+    padding: 10px;
+}
+
 /* Homepage Article Styles */
 
 .card{
