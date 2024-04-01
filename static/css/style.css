@@ -14,6 +14,9 @@ body {
     background-color: rgb(118, 209, 118);
 }
 
+.fa-leaf{
+    color: white;
+}
 .navbar .navbar-nav .nav-link {
     font-weight: 500;
     color: rgb(106, 173, 106);
