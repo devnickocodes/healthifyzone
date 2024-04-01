@@ -99,8 +99,10 @@ body {
     margin-top: 4rem;
 }
 
-
-
+/* Categories */
+.categories-container{
+    margin-bottom: 2rem;
+}
 /* Footer */
 
 .fa-github{
