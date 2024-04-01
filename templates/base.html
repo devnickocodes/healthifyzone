@@ -78,9 +78,14 @@
   </nav>
   </header>
 <main class="flex-shrink-0">
-  <div class="container">
-    <div class="row">
-      <img src="{% static 'images/placeholder.jpeg' %}" class="img-fluid mx-auto" alt="...">
+  <div class="container main-img-container">
+    <div class="col-12">
+      <div class="row">
+        <img src="{% static 'images/placeholder.jpeg' %}" class="img-fluid" alt="...">
+      </div>
+      <div class="row">
+        <h2 class="text-center main-text">Are you ready to embark on a new journey?</h2>
+      </div>
     </div>
   </div>
     {% block content %}

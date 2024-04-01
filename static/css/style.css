@@ -27,9 +27,8 @@ body {
 
 /* Homepage Article Styles */
 
-.main-img{
- height: 50%;
- width: 50%;
+.main-img-container{
+ padding-top: 3rem;
 }
 
 
