@@ -100,8 +100,18 @@ body {
 }
 
 /* Categories */
+
 .categories-container{
     margin-bottom: 2rem;
+}
+
+.categories-link{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.categories-link:hover{
+    color: rgb(0, 0, 0);
 }
 /* Footer */
 
