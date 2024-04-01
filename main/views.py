@@ -2,7 +2,7 @@
 # pylint: disable=missing-docstring
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from .models import Article
+from .models import Article, Category
 # Create your views here.
 
 class DisplayArticles(generic.ListView):
@@ -22,4 +22,3 @@ def view_article(request, article_slug):
         "main/view_article.html",
         {"article": article},
     )
-
