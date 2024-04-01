@@ -2,6 +2,7 @@
 # pylint: disable=missing-docstring
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Article, Category
 # Create your views here.
 
@@ -34,8 +35,18 @@ def view_by_category(request, category_slug):
     category = Category.objects.get(category_slug=category_slug)
     articles_related_to_category = category.article_set.all()
 
+    # Pagination
+    paginator = Paginator(articles_related_to_category, 4)  
+    page_number = request.GET.get('page')
+    try:
+        articles = paginator.page(page_number)
+    except PageNotAnInteger:
+        articles = paginator.page(1)
+    except EmptyPage:
+        articles = paginator.page(paginator.num_pages)
+
     return render(
         request,
         'main/articles_by_category.html',
-        {'articles_related_to_category': articles_related_to_category, 'category': category}
+        {'articles': articles, 'category': category}
     )
