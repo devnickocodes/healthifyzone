@@ -3,6 +3,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Article, Category
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # Create your views here.
 
 class DisplayArticles(generic.ListView):
