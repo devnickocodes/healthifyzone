@@ -1,7 +1,10 @@
 {% extends 'base.html' %} {% load static %}
 {% block content%}
 <div class="container categories-container">
-    <div class="row row-cols-lg-3 row-cols-md-2"> 
+    <div class="row">
+        <h1 class="text-center">Categories</h1>
+    </div>
+    <div class="row row-cols-lg-3 row-cols-md-2">
         {% for category in object_list %}
         <div class="col-lg-6 col-sm-6 mt-2 mb-4"> 
             <a href="{% url 'view_by_category' category.category_slug %}" class="card-link categories-link">
