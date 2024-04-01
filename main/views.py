@@ -27,4 +27,5 @@ class DisplayCategories(generic.ListView):
 
     queryset = Category.objects.filter(approved=True)
 
-    template_name = 'main/categories.html'   
+    template_name = 'main/categories.html'
+
