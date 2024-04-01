@@ -1,8 +1,9 @@
 {% extends 'base.html' %} {% load static %}
 {% block content%}
 
-<!-- Articles Showcase -->
-<div class="container">
+
+<!-- Main Image and Text -->
+<div class="container main-img-text-container">
     <div class="row">
         <div class="col-12">
             <div class="image-overlay">
@@ -12,6 +13,7 @@
         </div>
     </div>
 </div>
+<!-- Articles Showcase -->
 <div class="container-fluid">
     <div class="row row-cols-lg-3 row-cols-md-2"> 
         {% for article in object_list %}
