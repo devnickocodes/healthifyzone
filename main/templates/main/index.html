@@ -24,7 +24,7 @@
                     <div>
                         <h5 class="card-title text-center">{{article.title}}</h5>
                         <p class="card-text text-center">{{article.subtitle}}</p>
-                        <p class="card-text text-center">{{article.created_on}}</p>
+                        <p class="card-text text-center">{{article.created_on}} | Author goes here</p>
                     </div>
                     <div class="text-center">
                         <a href="{% url 'view_article' article.article_slug %}">
