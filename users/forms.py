@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 
 class UserRegistrationForm(UserCreationForm):
-    email = forms.EmailField()
+    email = forms.EmailField(required=True)
     username = forms.CharField()
 
     class Meta:
