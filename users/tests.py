@@ -22,3 +22,8 @@ class TestUserRegistrationForm(TestCase):
         form = UserRegistrationForm(data={'email': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('email', form.errors)
+    
+    def test_username_max_length(self):
+        form = UserRegistrationForm(data={'username': 'a' * 17})
+        self.assertFalse(form.is_valid())
+        self.assertIn('username', form.errors)
