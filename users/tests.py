@@ -39,3 +39,15 @@ class TestUserRegistrationForm(TestCase):
         }
         form = UserRegistrationForm(data=form_data)
         self.assertTrue(form.is_valid())
+
+    def test_invalid_data(self):
+        form_data = {
+            'first_name': 'John',
+            'last_name': 'Doe',
+            'username': 'johndoe',
+            'email': 'invalidemail',  # Invalid email format
+            'password1': 'password',
+            'password2': 'password',
+        }
+        form = UserRegistrationForm(data=form_data)
+        self.assertFalse(form.is_valid())
