@@ -1,4 +1,6 @@
 from django.test import TestCase
+from django import forms
+from django.core.exceptions import ValidationError 
 from .forms import UserRegistrationForm
 
 # Create your tests here.
@@ -30,12 +32,12 @@ class TestUserRegistrationForm(TestCase):
     
     def test_valid_data(self):
         form_data = {
-            'first_name': 'first name',
-            'last_name': 'last name',
-            'username': 'username',
+            'first_name': 'John',
+            'last_name': 'Doe',
+            'username': 'johndoe',
             'email': 'username@example.com',
-            'password1': 'password123@31',
-            'password2': 'password123@31'
+            'password1': '<Uf&xiMp.7H*&zE',
+            'password2': '<Uf&xiMp.7H*&zE'
         }
         form = UserRegistrationForm(data=form_data)
         self.assertTrue(form.is_valid())
@@ -46,8 +48,15 @@ class TestUserRegistrationForm(TestCase):
             'last_name': 'Doe',
             'username': 'johndoe',
             'email': 'invalidemail',  # Invalid email format
-            'password1': 'password',
-            'password2': 'password',
+            'password1': 'password', # Weak password
+            'password2': 'password', # Weak password
         }
         form = UserRegistrationForm(data=form_data)
         self.assertFalse(form.is_valid())
+
+    def test_clean_username_valid(self):
+
+        form = UserRegistrationForm(data={'username': 'janedoe123'})
+        form.is_valid()
+        self.assertEqual(form.clean_username(), 'janedoe123')
+    
