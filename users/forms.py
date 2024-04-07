@@ -13,5 +13,6 @@ class UserRegistrationForm(UserCreationForm):
     
     def clean_username(self):
         username = self.cleaned_data['username']
+        if not username.replace('_', '').isalnum():
+            raise forms.ValidationError('Username can only contain letters, numbers, and underscores.')
         return username
-    
