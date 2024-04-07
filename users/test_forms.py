@@ -60,3 +60,11 @@ class TestUserRegistrationForm(TestCase):
         form.is_valid()
         self.assertEqual(form.clean_username(), 'janedoe123')
     
+    def test_clean_username_invalid(self):
+        invalid_usernames = ['johndoe@', 'john doe', 'johndoe$%^']
+        for username in invalid_usernames:
+            form = UserRegistrationForm(data={'username': username})
+            self.assertFalse(form.is_valid())
+            if 'username' in form.cleaned_data: 
+                with self.assertRaisesMessage(forms.ValidationError, 'Username can only contain letters, numbers, and underscores.'):
+                    form.clean_username()
