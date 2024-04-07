@@ -1,6 +1,5 @@
 from django.test import TestCase
 from django import forms
-from django.core.exceptions import ValidationError 
 from .forms import UserRegistrationForm
 
 # Create your tests here.

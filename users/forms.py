@@ -16,3 +16,11 @@ class UserRegistrationForm(UserCreationForm):
         if not username.replace('_', '').isalnum():
             raise forms.ValidationError('Username can only contain letters, numbers, and underscores.')
         return username
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.email = self.cleaned_data['email']
+        if commit:
+            user.save()
+
+        return user
