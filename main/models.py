@@ -11,7 +11,7 @@ class Category(models.Model):
     category_slug = models.SlugField(null=False, blank=False, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    category_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, default=1)
+    category_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     class Meta:
 
         verbose_name_plural = "Categories"
@@ -32,7 +32,7 @@ class Article(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
     category = models.ForeignKey(Category, null=False, on_delete=models.CASCADE)
-    article_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, default=1)
+    article_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
 
     class Meta:
@@ -48,7 +48,7 @@ class Comment(models.Model):
     body = models.TextField(blank=False)
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    comment_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, default=1)
+    comment_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     class Meta:
         ordering = ["-created_on"]
