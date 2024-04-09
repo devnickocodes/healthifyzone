@@ -1,11 +1,11 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
-from django.core.validators import MaxLengthValidator
+from django.core.validators import MaxLengthValidator, MinLengthValidator
 
 class UserRegistrationForm(UserCreationForm):
     email = forms.EmailField(help_text='A valid email address, please.', required=True)
-    username = forms.CharField(validators=[MaxLengthValidator(16)], required=True)
+    username = forms.CharField(validators=[MinLengthValidator(3), MaxLengthValidator(16)], required=True)
 
     class Meta:
         model = get_user_model()
