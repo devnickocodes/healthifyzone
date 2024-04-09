@@ -63,6 +63,18 @@
                         href="{% url 'categories' %}">Categories</a>
                 </li>
               </ul>
+              {% if user.is_authenticated %}
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item mx-2 ">
+                    <a class="nav-link px-2" aria-current="page"
+                        href="#">{{user.username}}</a>
+                </li>
+                <li class="nav-item mx-2 ">
+                    <a class="nav-link px-2" aria-current="page"
+                        href="#">Log Out </a>
+                </li>
+            </ul>
+              {% else %}
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item mx-2 ">
                       <a class="nav-link px-2" aria-current="page"
@@ -73,6 +85,7 @@
                           href="#">Log In </a>
                   </li>
               </ul>
+              {% endif %}
           </div>
       </div>
   </nav>
