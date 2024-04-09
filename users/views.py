@@ -18,6 +18,6 @@ def register(request):
 
     return render(
         request=request,
-        template_name = "users/register.html",
+        template_name = ["users/register.html", "account/login.html"],
         context={"form": form}
     )
