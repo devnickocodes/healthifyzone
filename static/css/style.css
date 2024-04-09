@@ -7,6 +7,10 @@ body {
 
 /* Headers */
 
+h2{
+    font-size: 2em;
+}
+
 .category-header,
 .reg-header,
 .login-header{
@@ -132,11 +136,6 @@ body {
 .categories-container{
     margin-bottom: 2rem;
 }
-
-/* .categories-link{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-} */
 
 .categories-link:hover{
     color: rgb(0, 0, 0);
