@@ -8,7 +8,8 @@ body {
 /* Headers */
 
 .category-header,
-.reg-header{
+.reg-header,
+.login-header{
     border-radius: 0% 0% 50% 50%;
     background-color: rgb(82, 153, 41);
     color: rgb(255, 255, 255);
@@ -17,7 +18,8 @@ body {
     box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
 }
 
-.category-header{
+.category-header,
+.login-header{
     font-size: 2em;
 }
 

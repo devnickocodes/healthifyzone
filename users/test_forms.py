@@ -29,6 +29,12 @@ class TestUserRegistrationForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('username', form.errors)
     
+    def test_username_min_length(self):
+        form = UserRegistrationForm(data={'username': 'a'})
+        self.assertFalse(form.is_valid())
+        self.assertIn('username', form.errors)
+
+
     def test_valid_data(self):
         form_data = {
             'first_name': 'John',
