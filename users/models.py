@@ -20,4 +20,4 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
 
-        return f"{self.username} | {self.status}"
+        return f'{self.username}'
