@@ -13,10 +13,6 @@ def register(request):
             messages.success(request, f"Welcome on board {user.username}!")
             return redirect('/')
 
-        else:
-            for error in list(form.errors.values()):
-                messages.error(request, error)
-
     else:
         form = UserRegistrationForm()
 
