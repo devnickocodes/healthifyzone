@@ -7,15 +7,24 @@ body {
 
 /* Headers */
 
-.category-header{
+.category-header,
+.reg-header{
     border-radius: 0% 0% 50% 50%;
     background-color: rgb(82, 153, 41);
     color: rgb(255, 255, 255);
     -webkit-box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
     -moz-box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
     box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
+}
+
+.category-header{
     font-size: 2em;
 }
+
+.reg-header{
+    font-size: 1.5em;
+}
+
 
 /* Navbar Styles */
 .logo{
