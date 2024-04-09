@@ -11,6 +11,13 @@ h2{
     font-size: 2em;
 }
 
+/* Forms */
+
+#id_login, #id_password{
+    border-radius: 8px;
+    border: solid 2px rgb(0, 0, 0);
+}
+
 /* Links */
 
 .register-link{
