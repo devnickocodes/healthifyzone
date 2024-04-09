@@ -5,6 +5,54 @@ body {
     background-color: rgb(223, 248, 223);
 }
 
+/* Headers */
+
+h2{
+    font-size: 2em;
+}
+
+/* Forms */
+
+#id_login, #id_password{
+    border-radius: 8px;
+    border: solid 2px rgb(0, 0, 0);
+}
+
+/* Links */
+
+.register-link{
+    text-decoration: none;
+    color: rgba(30,70,7,1);
+    font-weight: 600;
+    font-style: italic;
+}
+
+.register-link:hover{
+    color: rgba(30,70,7,1);
+    text-decoration-line: underline;
+}
+
+.category-header,
+.reg-header,
+.login-header{
+    border-radius: 0% 0% 50% 50%;
+    background-color: rgb(82, 153, 41);
+    color: rgb(255, 255, 255);
+    -webkit-box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
+    -moz-box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
+    box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
+}
+
+.category-header,
+.login-header{
+    font-size: 2em;
+}
+
+.reg-header{
+    font-size: 1.2em;
+}
+
+
 /* Navbar Styles */
 .logo{
     font-size: 1.5rem;
@@ -15,11 +63,12 @@ body {
 }
 
 .fa-leaf{
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .navbar .navbar-nav .nav-link {
-    font-weight: 500;
+    font-weight: 600;
     color: rgb(106, 173, 106);
+    font-size: 17px;
 }
 
 .active{
@@ -28,8 +77,10 @@ body {
 }
 
 /* Homepage Main Img and Text */
+
 .main-img-text-container{
     padding-top: 3rem;
+    max-width: 55%;
 }
 
 .image-overlay {
@@ -45,7 +96,7 @@ body {
     left: 0;
     width: 100%; 
     height: 100%; 
-    background: rgba(0, 0, 0, 0.4); /
+    background: rgba(0, 0, 0, 0.4); 
 }
 
 .main-text {
@@ -75,6 +126,7 @@ body {
 }
 
 /* Pagination */
+
 #pagination-btn-prev, #pagination-btn-next{
     background-color: rgb(30, 70, 7);
     color: rgb(255, 255, 255);
@@ -105,11 +157,6 @@ body {
 
 .categories-container{
     margin-bottom: 2rem;
-}
-
-.categories-link{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
 }
 
 .categories-link:hover{
