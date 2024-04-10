@@ -23,4 +23,43 @@
       </div>
   </div>
 </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            {% for comment in comments %}
+            <div class="d-flex flex-column mb-4 {% if not comment.approved and comment.comment_author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        {{ comment.comment_author }}
+                    </div>
+                    <div class="ml-auto">
+                        Likes
+                    </div>
+                </div>
+                <div>
+                    {{ comment.created_on }}
+                </div>
+                <div>
+                    {{ comment.body | safe }}
+                </div>
+                {% if not comment.approved and comment.comment_author == user %}
+                <p class="approval">
+                    This comment is awaiting approval
+                </p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-lg-4">
+            <div>
+                Comment Form
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 {% endblock content %}

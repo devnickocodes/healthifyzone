@@ -21,8 +21,6 @@ def view_article(request, article_slug):
     comments = article.comments.all().order_by("-created_on")
     comment_count = article.comments.filter(approved=True).count()
 
-
-
     return render(
         request,
         "main/view_article.html",
