@@ -18,10 +18,17 @@ def view_article(request, article_slug):
     queryset = Article.objects.filter(approved=True)
     article = get_object_or_404(queryset, article_slug=article_slug)
 
+    comments = article.comments.all().order_by("-created_on")
+    comment_count = article.comments.filter(approved=True).count()
+
+
+
     return render(
         request,
         "main/view_article.html",
-        {"article": article},
+        {"article": article,
+        "comments": comments,
+        "comment_count": comment_count,},
     )
 
 class DisplayCategories(generic.ListView):
