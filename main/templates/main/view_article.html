@@ -32,14 +32,14 @@
             <div class="d-flex flex-column mb-4 {% if not comment.approved and comment.comment_author == user %}faded{% elif not comment.approved %}d-none{% endif %}">
                 <div class="d-flex justify-content-between">
                     <div>
-                        {{ comment.comment_author }}
+                        <p class="author">@{{ comment.comment_author }}</p>
                     </div>
                     <div class="ml-auto">
-                        Likes
+                        <p class="likes">Likes</p>
                     </div>
                 </div>
                 <div>
-                    {{ comment.created_on }}
+                    <p><small class="text-muted">{{ comment.created_on }}</small></p>
                 </div>
                 <div>
                     {{ comment.body | safe }}
