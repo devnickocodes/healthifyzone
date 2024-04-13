@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Article, Category
+from .forms import CommentForm
 # Create your views here.
 
 class DisplayArticles(generic.ListView):
@@ -21,12 +22,15 @@ def view_article(request, article_slug):
     comments = article.comments.all().order_by("-created_on")
     comment_count = article.comments.filter(approved=True).count()
 
+    comment_form = CommentForm()
+
     return render(
         request,
         "main/view_article.html",
         {"article": article,
         "comments": comments,
-        "comment_count": comment_count,},
+        "comment_count": comment_count,
+        "comment_form": comment_form},
     )
 
 class DisplayCategories(generic.ListView):
