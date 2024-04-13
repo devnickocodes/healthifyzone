@@ -31,6 +31,12 @@ h2{
     text-decoration-line: underline;
 }
 
+.register-link:hover,
+.log-in-link:hover{
+    color: rgba(30,70,7,1);
+    text-decoration-line: underline;
+}
+
 .category-header,
 .reg-header,
 .login-header{

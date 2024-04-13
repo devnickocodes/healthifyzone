@@ -43,7 +43,7 @@
                     <p><small class="text-muted">{{ comment.created_on }}</small></p>
                 </div>
                 <div>
-                    {{ comment.body | safe }}
+                    <p>{{ comment.body | safe }}</p>
                 </div>
                 {% if not comment.approved and comment.comment_author == user %}
                 <p class="approval">

@@ -22,6 +22,17 @@ def view_article(request, article_slug):
     comments = article.comments.all().order_by("-created_on")
     comment_count = article.comments.filter(approved=True).count()
 
+    
+    comment_form = CommentForm()
+
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.comment_author = request.user
+            comment.article = article
+            comment.save()
+
     comment_form = CommentForm()
 
     return render(
