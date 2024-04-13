@@ -3,6 +3,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib import messages
 from .models import Article, Category
 from .forms import CommentForm
 # Create your views here.
@@ -32,6 +33,11 @@ def view_article(request, article_slug):
             comment.comment_author = request.user
             comment.article = article
             comment.save()
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                'Thank you for commenting!'
+            )
 
     comment_form = CommentForm()
 
