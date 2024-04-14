@@ -101,7 +101,6 @@ def edit_comment(request, article_slug, comment_id):
 
 def delete_comment(request, article_slug, comment_id):
 
-    queryset = Article.objects.all()
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.comment_author == request.user or request.user.is_superuser:
