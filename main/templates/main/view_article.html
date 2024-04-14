@@ -52,7 +52,7 @@
                 {% endif %}
                 {% if user.is_authenticated and comment.comment_author == user %}
                 <button class="btn edit-btn" data-slug="{{ article.article_slug }}" comment_id="{{ comment.id }}" data-bs-toggle="collapse" data-bs-target="#collapseExample">Edit</button>
-                <button type="button" class="btn delete-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button>
+                <button  type="button" class="btn delete-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-slug="{{ article.slug }}" comment_id="{{ comment.id }}">Delete</button>
                 {% endif %}
             </div>
             {% endfor %}

@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const commentText = document.getElementById("id_body");
     const commentForm = document.getElementById("commentForm");
     const submitButton = document.getElementById("submitButton");
-    const leaveCommentButton = document.querySelector(".leave-comment-btn");
     const collapsibleSection = document.getElementById("collapseExample");
 
+    const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+    const deleteButtons = document.getElementsByClassName("delete-btn");
+    const deleteConfirm = document.getElementById("deleteConfirm");
     // Update article comment
 
     for (let button of editButtons) {
@@ -25,4 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
             collapse.show();
         });
     }
+
+        // delete blog post comments 
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("delete-btn")) {
+                let commentId = e.target.getAttribute("comment_id");
+                const slug = e.target.getAttribute("data-slug");
+                const deleteUrl = `/${slug}/delete_comment/${commentId}/`;
+                deleteConfirm.setAttribute("href", deleteUrl);
+                deleteModal.show();
+            }
+        });
 });
