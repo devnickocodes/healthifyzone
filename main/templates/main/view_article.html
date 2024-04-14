@@ -50,14 +50,16 @@
                     This comment is awaiting approval
                 </p>
                 {% endif %}
-                {% if user.is_authenticated %}
-                {% if comment.comment_author == user %}
-                    <button class="btn edit-btn" data-slug="{{ article.article_slug }}" comment_id="{{ comment.id }}" data-bs-toggle="collapse" data-bs-target="#collapseExample">Edit</button>
-                    <button type="button" class="btn delete-btn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-slug="{{ article.article_slug }}" comment_id="{{ comment.id }}">Delete</button>
-                {% elif user.is_superuser %}
-                    <button type="button" class="btn delete-btn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-slug="{{ article.article_slug }}" comment_id="{{ comment.id }}">Delete</button>
-                {% endif %}
-            {% endif %}
+                <div class="d-flex">
+                  {% if user.is_authenticated %}
+                      {% if comment.comment_author == user %}
+                          <button class="btn edit-btn me-2" data-slug="{{ article.article_slug }}" comment_id="{{ comment.id }}" data-bs-toggle="collapse" data-bs-target="#collapseExample">Edit</button>
+                          <button type="button" class="btn delete-btn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-slug="{{ article.article_slug }}" comment_id="{{ comment.id }}">Delete</button>
+                      {% elif user.is_superuser %}
+                          <button type="button" class="btn delete-btn" data-bs-toggle="modal" data-bs-target="#deleteModal" data-slug="{{ article.article_slug }}" comment_id="{{ comment.id }}">Delete</button>
+                      {% endif %}
+                  {% endif %}
+              </div>
             </div>
             {% endfor %}
         </div>
@@ -78,7 +80,7 @@
                             {{ comment_form | crispy }}
                             {% csrf_token %}
                             <button id="submitButton" type="submit"
-                              class="btn article-btn btn-lg">Submit</button>
+                              class="btn leave-comment-btn">Submit</button>
                           </form>
                           {% else %}
                           <p>If you wish to leave a comment, please
