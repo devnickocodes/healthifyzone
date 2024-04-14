@@ -50,6 +50,9 @@
                     This comment is awaiting approval
                 </p>
                 {% endif %}
+                {% if user.is_authenticated and comment.comment_author == user %}
+                <button class="btn edit-btn" comment_id="{{ comment.id }}">Edit</button>
+                {% endif %}
             </div>
             {% endfor %}
         </div>

@@ -76,3 +76,4 @@ def view_by_category(request, category_slug):
         'main/articles_by_category.html',
         {'articles': articles, 'category': category}
     )
+
