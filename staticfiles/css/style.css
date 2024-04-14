@@ -3,8 +3,7 @@
 
 body {
     font-family: "Inter", sans-serif;
-    /* background-color: rgb(223, 248, 223); */
-    background-color: pink;
+    background-color: rgb(223, 248, 223);
 }
 
 /* Headers */
@@ -23,14 +22,17 @@ h2{
 
 /* Links */
 
-.register-link{
+.register-link,
+.log-in-link{
     text-decoration: none;
     color: rgba(30,70,7,1);
     font-weight: 600;
     font-style: italic;
+    text-decoration-line: underline;
 }
 
-.register-link:hover{
+.register-link:hover,
+.log-in-link:hover{
     color: rgba(30,70,7,1);
     text-decoration-line: underline;
 }
@@ -58,8 +60,9 @@ h2{
 /* Log Out Page */
 
 .log-out-container{
-    border: 1px solid black;
-    background-color: black;
+    border: 0.5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-shadow: rgba(30, 70, 7, 0.4) 5px 5px, rgba(30, 70, 7, 0.3) 10px 10px, rgba(30, 70, 7, 0.2) 15px 15px, rgba(30, 70, 7, 0.1) 20px 20px, rgba(30, 70, 7, 0.05) 25px 25px;
 }
 
 /* Navbar Styles */
@@ -111,7 +114,7 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(255, 255, 255);
     z-index: 1;
 }
 
@@ -121,13 +124,15 @@ h2{
     border-radius: 8px;
 }
 
-.article-btn{
+.article-btn,
+.leave-comment-btn{
     background-color: rgb(126, 221, 126);
     font-weight: 600;
     border: 2px solid rgb(126, 221, 126);
 }
 
-.article-btn:hover{
+.article-btn:hover,
+.leave-comment-btn:hover{
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(126, 221, 126);
 }
@@ -171,6 +176,10 @@ h2{
 }
 /* Footer */
 
+.footer-content{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .fa-github{
     background-color: rgb(51, 51, 51);
     padding: 6px;
@@ -185,10 +194,28 @@ h2{
 }
 
 .footer-content{
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* Comment Section */
 
-.red-bg{
-    background-color: red;
+.comment-container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgba(51, 51, 51, 0.4);
+}
+
+.likes{
+    font-size: 18px;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 20px;
+}
+
+.approval{
+    color: rgb(30, 70, 7);
+    font-weight: 600;
+}
+
+.fa-heart{
+    color: rgb(207, 197, 237); 
 }
