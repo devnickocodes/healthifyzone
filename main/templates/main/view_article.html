@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
-<div class="container my-5">
+<div class="container">
     <img src="{% static 'images/placeholder.jpeg' %}" class="img-fluid" alt="...">
 </div>
   <div class="container">
@@ -53,24 +53,35 @@
             </div>
             {% endfor %}
         </div>
+
+        <!-- Submit a comment -->
         <div class="col-lg-4">
-            <div class="card-body">
-                {% if user.is_authenticated %}
-                <h2>Leave a comment:</h2>
-                <p>Posting as: {{ user.username }}</p>
-                <form id="commentForm" method="post">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button id="submitButton" type="submit"
-                      class="btn article-btn btn-lg">Submit</button>
-                  </form>
-                  {% else %}
-                  <p>If you wish to leave a comment, please
-                    <a href="{% url 'account_login' %}" class="log-in-link">log in</a> or
-                    <a href="{% url 'register' %}" class="register-link">sign up</a>
-                  </p>
-                  {% endif %}
-            </div>
+            <p>
+                <button class="btn leave-comment-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Leave a comment
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="card-body">
+                        {% if user.is_authenticated %}
+                        <h2>Leave a comment:</h2>
+                        <p>Posting as: {{ user.username }}</p>
+                        <form id="commentForm" method="post">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button id="submitButton" type="submit"
+                              class="btn article-btn btn-lg">Submit</button>
+                          </form>
+                          {% else %}
+                          <p>If you wish to leave a comment, please
+                            <a href="{% url 'account_login' %}" class="log-in-link">log in</a> or
+                            <a href="{% url 'register' %}" class="register-link">sign up</a>
+                          </p>
+                          {% endif %}
+                    </div>
+                </div>
+              </div>
         </div>
     </div>
 </div>

@@ -124,13 +124,15 @@ h2{
     border-radius: 8px;
 }
 
-.article-btn{
+.article-btn,
+.leave-comment-btn{
     background-color: rgb(126, 221, 126);
     font-weight: 600;
     border: 2px solid rgb(126, 221, 126);
 }
 
-.article-btn:hover{
+.article-btn:hover,
+.leave-comment-btn:hover{
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(126, 221, 126);
 }
