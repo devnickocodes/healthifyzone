@@ -54,4 +54,4 @@ class Comment(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"Comment: {self.body} | Author: {self.comment_author}"
+        return f"Author: {self.comment_author}"

@@ -19,5 +19,5 @@ class ArticleAdmin(SummernoteModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
-    list_display = ('article', 'approved',)
+    list_display = ('article', 'approved', 'comment_author')
     list_filter = ('approved', 'created_on')

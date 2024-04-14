@@ -43,7 +43,7 @@
                     <p><small class="text-muted">{{ comment.created_on }}</small></p>
                 </div>
                 <div>
-                    <p>{{ comment.body | safe }}</p>
+                    <p id="comment{{ comment.id }}">{{ comment.body | safe }}</p>
                 </div>
                 {% if not comment.approved and comment.comment_author == user %}
                 <p class="approval">
@@ -51,7 +51,7 @@
                 </p>
                 {% endif %}
                 {% if user.is_authenticated and comment.comment_author == user %}
-                <button class="btn edit-btn" comment_id="{{ comment.id }}">Edit</button>
+                <button class="btn edit-btn" data-slug="{{ article.article_slug }}" comment_id="{{ comment.id }}" data-bs-toggle="collapse" data-bs-target="#collapseExample">Edit</button>
                 {% endif %}
             </div>
             {% endfor %}
