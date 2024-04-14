@@ -1,10 +1,11 @@
 # pylint: disable=no-member
 # pylint: disable=missing-docstring
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
-from .models import Article, Category
+from django.http import HttpResponseRedirect
+from .models import Article, Category, Comment
 from .forms import CommentForm
 # Create your views here.
 
@@ -77,3 +78,23 @@ def view_by_category(request, category_slug):
         {'articles': articles, 'category': category}
     )
 
+def edit_comment(request, article_slug, comment_id):
+
+    if request.method == "POST":
+
+        queryset = Article.objects.all()
+        article = get_object_or_404(queryset, article_slug=article_slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.comment_author == request.user:
+            
+            comment = comment_form.save(commit=False)
+            comment.article = article
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('view_article', args=[article_slug]))
