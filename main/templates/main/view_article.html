@@ -67,7 +67,7 @@
         <!-- Submit a comment -->
         <div class="col-lg-4">
             <p>
-                <button class="btn leave-comment-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button class="btn main-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                   Leave a comment
                 </button>
               </p>
@@ -80,7 +80,7 @@
                             {{ comment_form | crispy }}
                             {% csrf_token %}
                             <button id="submitButton" type="submit"
-                              class="btn leave-comment-btn">Submit</button>
+                              class="btn main-btn">Submit</button>
                           </form>
                           {% else %}
                           <p>If you wish to leave a comment, please
