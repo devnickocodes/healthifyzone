@@ -1,4 +1,9 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+<p>{{ form.instance.username }}</p>
+<p>{{ form.instance.status }}</p>
+<p>{{ form.instance.first_name }} {{ form.instance.last_name }}</p>
+<p>{{ form.instance.email }}</p>
+<p>{{ form.instance.bio }}</p>
 {% endblock content %}
