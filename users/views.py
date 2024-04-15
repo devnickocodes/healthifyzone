@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, get_user_model
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import UserRegistrationForm, userUpdateProfileForm
 # Create your views here.
 
@@ -23,8 +24,8 @@ def register(request):
     )
 
 
+@login_required
 def view_profile(request, username):
-
     if request.method == "POST":
         user = request.user
         form = userUpdateProfileForm(request.POST, request.FILES, instance=user)
@@ -44,4 +45,8 @@ def view_profile(request, username):
             template_name="users/profile_page.html",
             context={"form": form}
         )
-    return redirect("homepage")
+    
+    return render(
+        request=request,
+        template_name="users/user_not_found.html"
+    )
