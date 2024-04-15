@@ -14,7 +14,7 @@
                         <div>
                             <h2 class="card-title text-center">{{category.title}}</h2>
                             <p class="card-text text-center">{{category.subtitle}}</p>
-                            <p class="card-text text-center">{{category.category_author}} | {{category.created_on |date:"F d, Y" }}</p>
+                            <p class="card-text text-center"><a href="{% url 'view_profile' category.category_author%}">{{category.category_author}}</a> | {{category.created_on |date:"F d, Y" }}</p>
                         </div>
                         <div class="text-center">
                             <a href="{% url 'view_by_category' category.category_slug %}">

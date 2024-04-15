@@ -21,6 +21,7 @@
                     {{ form.instance.email }}
                 </p>
                 {% endif %}
+                {% if user.username == form.instance.username %}
                 <div class="card mb-2 mx-auto mt-4 profile-update-form">
                     <h2 class="text-center">Update Profile Info:</h2>
                     <div class="card-body text-center">
@@ -32,6 +33,7 @@
                         <button class="btn update-profile-btn" type="submit">Update</button>
                     </div>
                 </div>
+                {% endif %}
             </div>
         </form>
     </div>
