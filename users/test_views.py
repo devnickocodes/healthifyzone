@@ -2,7 +2,6 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.shortcuts import reverse
 from django.forms.models import model_to_dict
-from .views import view_profile
 from .forms import userUpdateProfileForm
 
 class ProfileViewTestCase(TestCase):

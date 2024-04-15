@@ -1,9 +1,28 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<p>{{ form.instance.username }}</p>
-<p>{{ form.instance.status }}</p>
-<p>{{ form.instance.first_name }} {{ form.instance.last_name }}</p>
-<p>{{ form.instance.email }}</p>
-<p>{{ form.instance.bio }}</p>
+<div class="container">
+    <div class="card mx-auto mt-4 profile-card">
+        <h1 class="text-center">Profile Info:</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="card-body text-center">
+                <div>
+                    <img src="https://img.icons8.com/bubbles/100/000000/administrator-male.png" class="img-lg rounded-circle mb-4" alt="profile image">
+                    <h2>{{ form.instance.username }}</h2>
+                    <p>{{ form.instance.get_status_display }} level gym goer and healthy lifestyle enthusiast.</p>
+                </div>
+                <p class="mt-2 card-text">
+                    {{ form.instance.bio | striptags | escape }}
+                </p>
+                <p>{{ form.instance.first_name }} {{ form.instance.last_name }}</p>
+                {% if user.username == form.instance.username %}
+                <p class="mt-2 card-text">
+                    {{ form.instance.email }}
+                </p>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock content %}
