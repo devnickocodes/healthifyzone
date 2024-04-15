@@ -22,6 +22,7 @@ def register(request):
         context={"form": form}
     )
 
+
 def view_profile(request, username):
 
     if request.method == "POST":
