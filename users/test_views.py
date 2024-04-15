@@ -38,3 +38,25 @@ class ProfileViewTestCase(TestCase):
             self.assertEqual(self.user.last_name, "User")
             self.assertEqual(self.user.email, "test@email.com")
             self.assertEqual(self.user.bio, "This is a test bio.")
+        
+    def test_post_request_with_invalid_form(self):
+        form_data = {
+            "username": self.user.username,
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "bio": "",
+        }
+        form = userUpdateProfileForm(data=form_data)
+        if form.is_valid():
+            form_dict = model_to_dict(form.save())
+            response = self.client.post(
+                reverse("view_profile", args=[self.user.username]),
+                data=form_dict
+            )
+            self.assertEqual(response.status_code, 200)
+            self.assertTemplateUsed(response, "users/profile_page.html")
+            self.assertContains(response, "This field is required.")
+            self.assertContains(response, "This field is required.")
+            self.assertContains(response, "This field is required.")
+            self.assertContains(response, "This field is required.")
