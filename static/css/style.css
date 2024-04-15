@@ -226,3 +226,19 @@ h2{
     background-color: rgb(168, 159, 159);
 }
 
+/* Link to author profile page */
+.author{
+    text-decoration: none;
+    color: #B4E4CE;
+    font-weight: 600;
+    background-color: #303030;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.author:hover{
+    text-decoration: none;
+    color: #303030;
+    background-color: #B4E4CE;
+    font-weight: 600;
+}

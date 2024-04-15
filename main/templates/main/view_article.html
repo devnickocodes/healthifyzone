@@ -9,7 +9,7 @@
               <h1 class="post-title text-center">{{ article.title }}</h1>
       </div>
       <div class="row">
-            <p class="text-center pt-3"><a href="{% url 'view_profile' article.article_author%}">{{article.article_author}}</a> | {{ article.created_on |date:"F d, Y" }}</p>
+            <p class="text-center pt-3"><a class="author" href="{% url 'view_profile' article.article_author%}">{{article.article_author}}</a> | {{ article.created_on |date:"F d, Y" }}</p>
     </div>
   </div>
 <div class="container">
@@ -33,7 +33,7 @@
             <div class="d-flex flex-column mb-4 p-3 comment-container {% if not comment.approved and comment.comment_author == user %}text-muted{% elif not comment.approved %}d-none{% endif %}">
                 <div class="d-flex justify-content-between">
                     <div>
-                        <p class="author"><a href="{% url 'view_profile' comment.comment_author%}">@{{ comment.comment_author }}</a></p>
+                        <p class="author"><a class="author" href="{% url 'view_profile' comment.comment_author%}">@{{ comment.comment_author }}</a></p>
                     </div>
                     <div class="ml-auto">
                         <p class="likes py-1 px-3"><i class="fa-sharp fa-solid fa-heart m-2"></i>25</p>
