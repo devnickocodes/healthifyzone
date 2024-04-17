@@ -33,7 +33,8 @@ class Article(models.Model):
     approved = models.BooleanField(default=False)
     category = models.ForeignKey(Category, null=False, on_delete=models.CASCADE)
     article_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-
+    article_likes = models.ManyToManyField(get_user_model(), blank=True, related_name='liked_by')
+    article_likes_count = models.BigIntegerField(default=0)
 
     class Meta:
 
@@ -49,6 +50,8 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     comment_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    comment_likes = models.ManyToManyField(get_user_model(), blank=True, related_name='liked_comments')
+    comment_likes_count = models.BigIntegerField(default=0)
 
     class Meta:
         ordering = ["-created_on"]
