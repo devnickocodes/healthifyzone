@@ -18,18 +18,30 @@
                 </p>
                 <p>{{ form.instance.first_name }} {{ form.instance.last_name }}</p>
                 {% if user.username == form.instance.username %}
+                
                 <p class="mt-2 card-text">
                     {{ form.instance.email }}
                 </p>
                 {% endif %}
                 {% if user.username == form.instance.username %}
-                <div class="card mb-2 mx-auto mt-4 profile-update-form">
-                    <h2 class="text-center">Update Profile Info:</h2>
-                    <div class="card-body text-center">
-                        {% crispy form %}
-                        <button class="btn main-btn" type="submit">Update</button>
+                
+
+                <p>
+                    <button class="btn main-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Settings
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <div class="card mb-2 mx-auto mt-4 profile-update-form">
+                            <h2 class="text-center">Update Profile Info:</h2>
+                            <div class="card-body text-center">
+                                {% crispy form %}
+                                <button class="btn main-btn" type="submit">Update</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                  </div>
                 {% endif %}
             </div>
         </form>
