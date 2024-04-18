@@ -36,5 +36,6 @@ class userUpdateProfileForm(forms.ModelForm):
             'last_name',
             'email',
             'bio',
-            'status'
+            'status',
+            'profile_image'
         ]
