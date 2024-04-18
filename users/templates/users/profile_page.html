@@ -11,7 +11,7 @@
             <div class="card-body text-center">
                 <div>
                     {% if "profile_image_placeholder" in request.user.profile_image.url %}
-                        <img  class="profile-pic w-25" src="{% static 'images/profile_image_placeholder.png' %}" alt="Default Profile Image">
+                        <img  class="profile-pic w-25" src="{% static 'images/profile_image_placeholder.png' %}" alt="Default Profile Image" >
                     {% else %}
                     <img class="profile-pic w-25" src="{{ request.user.profile_image.url }}" alt="{{ request.user.username }}'s Profile Image">
                     {% endif %}
