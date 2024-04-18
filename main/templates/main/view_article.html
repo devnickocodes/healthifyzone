@@ -36,7 +36,11 @@
                         <p class="author"><a class="author" href="{% url 'view_profile' comment.comment_author%}">@{{ comment.comment_author }}</a></p>
                     </div>
                     <div class="ml-auto">
-                        <p class="likes py-1 px-3"><i class="fa-sharp fa-solid fa-heart m-2"></i>25</p>
+                      <!-- Comment Likes -->
+                       <button class="likes" id="like-comment-button" value="comment.id">
+                        <i class="fa-sharp fa-solid fa-heart m-2"></i>
+                        <span id="comment_likes_count">0</span>
+                      </button>
                     </div>
                 </div>
                 <div>
