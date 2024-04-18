@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -9,7 +10,11 @@
             {% csrf_token %}
             <div class="card-body text-center">
                 <div>
-                    <img src="https://img.icons8.com/bubbles/100/000000/administrator-male.png" class="img-lg rounded-circle mb-4" alt="profile image">
+                    {% if "profile_image_placeholder" in request.user.profile_image.url %}
+                    <img class="profile-pic" src="{% static 'images/profile_image_placeholder.png' %}" alt="Default Profile Image">
+                {% else %}
+                    <img class="profile-pic" src="{{ request.user.profile_image.url }}" alt="{{ request.user.username }}'s Profile Image">
+                {% endif %}
                     <h2>{{ form.instance.username }}</h2>
                     <p>{{ form.instance.get_status_display }} level gym goer and healthy lifestyle enthusiast.</p>
                 </div>
