@@ -46,11 +46,11 @@
                     </div>
                     <div class="ml-auto">
                       <!-- Comment Likes -->
-                       <button class="likes" id="like-comment-button" value="comment.id">
-                        <i class="fa-sharp fa-solid fa-heart m-2"></i>
-                        <span id="comment_likes_count">0</span>
+                      <button class="likes" data-commentid="{{ comment.id }}" data-likescount="{{ comment.comment_likes_count }}">
+                          <i class="fa-sharp fa-solid fa-heart m-2"></i>
+                          <span class="comment-likes-count">{{ comment.comment_likes_count }}</span>
                       </button>
-                    </div>
+                  </div>
                 </div>
                 <div>
                     <p><small class="text-muted">{{ comment.created_on }}</small></p>
