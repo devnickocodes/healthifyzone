@@ -43,7 +43,8 @@ def view_profile(request, username):
         return render(
             request=request,
             template_name="users/profile_page.html",
-            context={"form": form}
+            context={"form": form,
+            'user': user}
         )
     
     return render(
