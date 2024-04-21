@@ -34,6 +34,7 @@
                 <div class="d-flex justify-content-between">
                         <p class="author"><a class="author" href="{% url 'view_profile' comment.comment_author%}">@{{ comment.comment_author }}</a></p>
                     <div class="ml-auto">
+                      {% if comment.approved %}
                         <!-- Comment Likes -->
                         {% if user.is_authenticated %}
                         <button class="likes" data-commentid="{{ comment.id }}" data-likescount="{{ comment.comment_likes_count }}">
@@ -45,6 +46,7 @@
                           <i class="fa-sharp fa-solid fa-heart m-2"></i>
                           <span class="comment-likes-count">{{ comment.comment_likes_count }}</span>
                       </button>
+                        {% endif %}
                         {% endif %}
                   </div>
                 </div>
