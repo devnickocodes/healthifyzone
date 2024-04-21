@@ -5,6 +5,7 @@ from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.http import HttpResponseRedirect, JsonResponse
+from django.contrib.auth.decorators import login_required
 from .models import Article, Category, Comment
 from .forms import CommentForm
 # Create your views here.
@@ -111,7 +112,7 @@ def delete_comment(request, article_slug, comment_id):
 
     return HttpResponseRedirect(reverse('view_article', args=[article_slug]))
 
-
+@login_required
 def like_comment(request):
     if request.POST.get('action') == 'post':
         comment_id = int(request.POST.get('commentid'))
