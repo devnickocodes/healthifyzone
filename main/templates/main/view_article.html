@@ -126,6 +126,32 @@
       </div>
     </div>
   </div>
+
+<script>
+    $(document).on('click', '.likes', function (e) {
+        e.preventDefault();
+        var $button = $(this);
+        var commentId = $button.data('commentid');
+        var likesCount = parseInt($button.data('likescount'));
+    
+        $.ajax({
+            type: 'POST',
+            url: '{% url "like_comment" %}',
+            data: {
+                commentid: commentId,
+                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                action: 'post'
+            },
+            success: function (json) {
+                $button.find('.comment-likes-count').text(json['result']);
+                $button.data('likescount', json['result']);
+            },
+            error: function (xhr, errmsg, err) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+</script>
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
