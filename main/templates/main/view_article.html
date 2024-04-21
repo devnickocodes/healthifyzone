@@ -123,6 +123,7 @@
     </div>
   </div>
 
+{% if user.is_authenticated %}
 <script>
 $(document).on('click', '.likes', function (e) {
     e.preventDefault();
@@ -149,6 +150,7 @@ $(document).on('click', '.likes', function (e) {
     });
 });
 </script>
+{% endif %}
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
