@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
     const deleteButtons = document.getElementsByClassName("delete-btn");
     const deleteConfirm = document.getElementById("deleteConfirm");
+
+    // Toggle popover if a non autheticated user tries to like a comment
+    $('[data-toggle="popover"]').popover();
+
+    
     // Update article comment
 
     for (let button of editButtons) {
