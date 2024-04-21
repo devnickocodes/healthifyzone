@@ -147,7 +147,7 @@
                 $button.data('likescount', json['result']);
             },
             error: function (xhr, errmsg, err) {
-                console.log(xhr.responseText);
+              alert('Failed to like the comment. Please try again later.');
             }
         });
     });

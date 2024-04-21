@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from .models import Article, Category, Comment
 from .forms import CommentForm
 # Create your views here.
@@ -110,3 +110,22 @@ def delete_comment(request, article_slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('view_article', args=[article_slug]))
+
+
+def like_comment(request):
+    if request.POST.get('action') == 'post':
+        comment_id = int(request.POST.get('commentid'))
+        comment = get_object_or_404(Comment, id=comment_id)
+        
+        if comment.comment_likes.filter(id=request.user.id).exists():
+            comment.comment_likes.remove(request.user)
+            comment.comment_likes_count -= 1
+        else:
+            comment.comment_likes.add(request.user)
+            comment.comment_likes_count += 1
+        
+        comment.save()
+        result = comment.comment_likes_count
+        return JsonResponse({'result': result})
+    
+    return JsonResponse({'error': 'Invalid request method or action'}, status=400)
