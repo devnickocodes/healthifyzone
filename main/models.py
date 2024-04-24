@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 
@@ -12,6 +14,8 @@ class Category(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     category_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    featured_category_image = CloudinaryField('image', default='placeholder.png')
+
     class Meta:
 
         verbose_name_plural = "Categories"
@@ -35,6 +39,8 @@ class Article(models.Model):
     article_author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     article_likes = models.ManyToManyField(get_user_model(), blank=True, related_name='liked_by')
     article_likes_count = models.BigIntegerField(default=0)
+    featured_article_image = CloudinaryField('image', default='placeholder.png')
+
 
     class Meta:
 
