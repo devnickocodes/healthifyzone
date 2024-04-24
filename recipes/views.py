@@ -22,4 +22,16 @@ def recipe_search_results(request):
             response = requests.get(endpoint, params=params)
             if response.status_code == 200:
                 data = response.json()
-                return render(request, 'recipes/recipes_search_results.html', context={'data': data})
+                results = data.get('results', [])
+                context = {
+                    'query': query,
+                    'recipes': results
+                }
+                return render(request, 'recipes/recipes_search_results.html', context)
+
+            else:
+                return HttpResponse("Failed to fetch recipe search results")
+        else:
+            return HttpResponse("No query provided for recipe search")
+    else:
+        return HttpResponse("Invalid request method")

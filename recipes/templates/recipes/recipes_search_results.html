@@ -1,1 +1,7 @@
-<h1>{{data}}</h1>
+<h1>Search Results for "{{ query }}"</h1>
+    {% for recipe in recipes %}
+    <img src="{{ recipe.image }}" alt="{{ recipe.title }}' Recipe Image"/>
+    <h5 class="card-title">{{ recipe.title }}</h5>
+      {% endfor %}
+    </div>
+  </div>
