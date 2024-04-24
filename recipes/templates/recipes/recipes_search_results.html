@@ -1,7 +1,26 @@
-<h1>Search Results for "{{ query }}"</h1>
-    {% for recipe in recipes %}
-    <img src="{{ recipe.image }}" alt="{{ recipe.title }}' Recipe Image"/>
-    <h5 class="card-title">{{ recipe.title }}</h5>
-      {% endfor %}
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-5 py-2 category-header">Search Results for "{{ query }}"</h1>
+    <div class="row row-cols-lg-3 row-cols-md-2 mb-5">
+        {% for recipe in recipes %}
+        <div class="col-lg-4 col-md-6 col-sm-6 mt-3">
+            <div class="card h-100 d-flex flex-column m-4">
+                <img class="card-img-top img-fluid recipe-img" src="{{ recipe.image }}" alt="{{ recipe.title }}'s Recipe Image"/>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h2 class="card-title text-center">{{ recipe.title }}</h2>
+                    </div>
+                    <div class="text-center">
+                        <a href="#">
+                            <button type="button" class="btn main-btn" data-mdb-ripple-init>View Recipe</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-  </div>
+</div>
+{% endblock %}
+    

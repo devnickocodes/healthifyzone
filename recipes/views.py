@@ -15,17 +15,17 @@ def recipe_search_results(request):
             endpoint = 'https://api.spoonacular.com/recipes/complexSearch'
             params = {
                 'query': query,
-                'number': 10,
+                'number': 9,
                 'apiKey': SPOONACULAR_API_KEY
             }
-            
             response = requests.get(endpoint, params=params, timeout=15)
             if response.status_code == 200:
                 data = response.json()
                 results = data.get('results', [])
                 context = {
                     'query': query,
-                    'recipes': results
+                    'recipes': results,
+                    'addRecipeInformation': 'true',
                 }
                 return render(request, 'recipes/recipes_search_results.html', context)
             
