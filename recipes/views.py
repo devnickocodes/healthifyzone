@@ -20,4 +20,6 @@ def recipe_search_results(request):
             }
             
             response = requests.get(endpoint, params=params)
-            return render(request, 'recipes/recipes_search_results.html', context={'response': response})
+            if response.status_code == 200:
+                data = response.json()
+                return render(request, 'recipes/recipes_search_results.html', context={'data': data})
