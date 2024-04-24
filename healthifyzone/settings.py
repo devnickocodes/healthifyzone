@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'users',
     'main',
+    'recipes',
 ]
 
 # Cloudinary configuration

@@ -1,8 +1,9 @@
 {% load static %}
 {% url 'homepage' as homepage_url %}
 {% url 'categories' as categories_url%}
+{% url 'categories' as categories_url%}
 {% url 'account_login' as login_url %}
-{% url 'account_logout' as logout_url %}
+{% url 'recipe_search' as recipe_search_url %}
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
@@ -69,7 +70,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link px-2 mx-2" aria-current="page"
-                      href="#">Recipes</a>
+                      href="{% url 'recipe_search' %}">Recipes</a>
               </li>
               </ul>
               {% if user.is_authenticated %}

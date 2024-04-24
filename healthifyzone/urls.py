@@ -23,5 +23,6 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('register/', user_views.register, name='register'),
     path('', include('users.urls')),
+    path('', include('recipes.urls')),
     path('', include('main.urls')),
 ]
