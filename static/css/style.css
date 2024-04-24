@@ -134,6 +134,11 @@ h2{
     border: 2px solid rgb(126, 221, 126);
 }
 
+.article-img {
+    height: 400px;
+    object-fit: cover; 
+}
+
 /* Pagination */
 
 #pagination-btn-prev, #pagination-btn-next{
