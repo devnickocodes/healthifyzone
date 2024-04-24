@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% load static %}
 {% block content%}
+
+<!-- Categories -->
+
 <div class="container categories-container">
     <div class="row">
         <h1 class="text-center mb-5 py-2 category-header">Categories</h1>
@@ -7,7 +10,6 @@
     <div class="row row-cols-lg-3 row-cols-md-2">
         {% for category in object_list %}
         <div class="col-lg-6 col-sm-6 mt-2 mb-4"> 
-            <!-- <a href="{% url 'view_by_category' category.category_slug %}" class="card-link categories-link"> -->
                 <div class="card h-100 d-flex flex-column m-4">
                     <img class="card-img-top" src="{% static 'images/placeholder.jpeg' %}" alt="Card image cap">
                     <div class="card-body d-flex flex-column justify-content-between"> 

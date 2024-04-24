@@ -3,6 +3,9 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+
+<!-- Profile Display -->
+
 <div class="container">
     <div class="card mx-auto mt-4 profile-card">
         <h1 class="text-center">Profile Info:</h1>
@@ -28,6 +31,8 @@
                     {{ user.email }}
                 </p>
                 {% endif %}
+
+                <!-- Profile Edit --> 
                 {% if user.username == request.user.username %}
                 <p>
                     <button class="btn main-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
