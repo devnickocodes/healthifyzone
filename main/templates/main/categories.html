@@ -11,7 +11,11 @@
         {% for category in object_list %}
         <div class="col-lg-6 col-sm-6 mt-2 mb-4"> 
                 <div class="card h-100 d-flex flex-column m-4">
-                    <img class="card-img-top" src="{% static 'images/placeholder.jpeg' %}" alt="Card image cap">
+                    {% if "placeholder" in category.featured_category_image.url %}
+                        <img  class="profile-pic" src="{% static 'images/placeholder.png' %}" alt="Default Feature Image" >
+                    {% else %}
+                    <img class="profile-pic" src="{{ category.featured_category_image.url }}" alt="{{ category.title }}'s Feature Image">
+                    {% endif %}
                     <div class="card-body d-flex flex-column justify-content-between"> 
                         <div>
                             <h2 class="card-title text-center">{{category.title}}</h2>
