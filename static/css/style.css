@@ -135,9 +135,10 @@ h2{
 }
 
 .article-img {
-    height: 400px;
+    height: 500px;
     object-fit: cover; 
 }
+
 
 /* Pagination */
 

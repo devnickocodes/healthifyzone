@@ -5,7 +5,11 @@
 <!-- Article Display -->
 
 <div class="container">
-    <img src="{% static 'images/placeholder.jpeg' %}" class="img-fluid" alt="...">
+  {% if "placeholder" in article.featured_article_image.url %}
+  <img class="card-img-top img-fluid article-img mb-2" src="{% static 'images/placeholder.jpeg' %}" alt="Default Feature Image">
+  {% else %}
+  <img class="card-img-top img-fluid article-img mb-2" src="{{ article.featured_article_image.url }}" alt="{{ article.title }}'s Feature Image">
+  {% endif %}
 </div>
   <div class="container">
       <div class="row">
