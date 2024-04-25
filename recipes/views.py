@@ -19,7 +19,7 @@ def recipe_search_results(request):
                 'apiKey': SPOONACULAR_API_KEY
             }
             try:
-                response = requests.get(endpoint, params=params, timeout=0.1)
+                response = requests.get(endpoint, params=params, timeout=15)
                 response.raise_for_status()
                 data = response.json()
                 results = data.get('results', [])

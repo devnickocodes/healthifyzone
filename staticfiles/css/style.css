@@ -90,7 +90,6 @@ h2{
 
 .main-img-text-container{
     padding-top: 3rem;
-    max-width: 55%;
 }
 
 .image-overlay {
@@ -134,6 +133,12 @@ h2{
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(126, 221, 126);
 }
+
+.article-img {
+    height: 500px;
+    object-fit: cover; 
+}
+
 
 /* Pagination */
 
