@@ -18,8 +18,9 @@ def recipe_search_results(request):
                 'number': 9,
                 'apiKey': SPOONACULAR_API_KEY
             }
-            response = requests.get(endpoint, params=params, timeout=15)
-            if response.status_code == 200:
+            try:
+                response = requests.get(endpoint, params=params, timeout=0.1)
+                response.raise_for_status()
                 data = response.json()
                 results = data.get('results', [])
                 context = {
@@ -28,11 +29,9 @@ def recipe_search_results(request):
                     'addRecipeInformation': 'true',
                 }
                 return render(request, 'recipes/recipes_search_results.html', context)
-            
-            return HttpResponse("Failed to fetch recipe search results")
-
+            except requests.RequestException as e:
+                return HttpResponse(f"Failed to fetch recipe search results: {e}")
         return HttpResponse("No query provided for recipe search")
-
     return HttpResponse("Invalid request method")
 
 def recipe_detail(request, recipe_id):
@@ -41,7 +40,7 @@ def recipe_detail(request, recipe_id):
         'apiKey': SPOONACULAR_API_KEY
     }
     try:
-        response = requests.get(endpoint, params=params, timeout=0.1)
+        response = requests.get(endpoint, params=params, timeout=15)
         response.raise_for_status()
         recipe_data = response.json()
         context = {
