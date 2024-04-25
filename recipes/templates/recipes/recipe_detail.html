@@ -1,3 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
+<h1>{{ recipe_data.title }}</h1>
+<p>Servings: {{recipe_data.servings}}</p>
+<p>Preparation time: {{ recipe_data.readyInMinutes }} minutes</p>
+<img src="{{ recipe_data.image }}" alt="{{ recipe_data.title }}'s Recipe Image" />
+<h2>Ingredients:</h2>
+<ul>
+  {% for ingredient in recipe_data.extendedIngredients %}
+  <li>{{ ingredient.original }}</li>
+  {% endfor %}
+</ul>
+<a href="#"
+  >View Instructions</a
+>
 {% endblock %}

@@ -12,7 +12,7 @@
                         <h2 class="card-title text-center">{{ recipe.title }}</h2>
                     </div>
                     <div class="text-center">
-                        <a href="#">
+                        <a href="{% url 'recipe_detail' recipe_id=recipe.id %}">
                             <button type="button" class="btn main-btn" data-mdb-ripple-init>View Recipe</button>
                         </a>
                     </div>

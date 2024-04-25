@@ -34,3 +34,19 @@ def recipe_search_results(request):
         return HttpResponse("No query provided for recipe search")
 
     return HttpResponse("Invalid request method")
+
+def recipe_detail(request, recipe_id):
+    endpoint = f'https://api.spoonacular.com/recipes/{recipe_id}/information'
+    params = {
+        'apiKey': SPOONACULAR_API_KEY
+    }
+    try:
+        response = requests.get(endpoint, params=params, timeout=0.1)
+        response.raise_for_status()
+        recipe_data = response.json()
+        context = {
+            'recipe_data': recipe_data
+        }
+        return render(request, 'recipes/recipe_detail.html', context)
+    except requests.RequestException as e:
+        return HttpResponse(f"Failed to fetch recipe details: {e}")
