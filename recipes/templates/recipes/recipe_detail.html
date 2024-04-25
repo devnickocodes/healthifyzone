@@ -1,16 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{ recipe_data.title }}</h1>
-<p>Servings: {{recipe_data.servings}}</p>
-<p>Preparation time: {{ recipe_data.readyInMinutes }} minutes</p>
-<img src="{{ recipe_data.image }}" alt="{{ recipe_data.title }}'s Recipe Image" />
-<h2>Ingredients:</h2>
-<ul>
-  {% for ingredient in recipe_data.extendedIngredients %}
-  <li>{{ ingredient.original }}</li>
-  {% endfor %}
-</ul>
-<a href="#"
-  >View Instructions</a
->
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="text-center mb-5 py-2 category-header">{{ recipe_data.title }}</h1>
+        <div class="row mb-4">
+          <div class="col-md-6 text-center">
+            <p>Servings: <i class="fa-solid fa-user-group"></i>{{ recipe_data.servings }}</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <p>Preparation time: <i class="fa-solid fa-clock"></i> {{ recipe_data.readyInMinutes }} minutes</p>
+          </div>
+        </div>
+        <div class="text-center mb-4">
+          <img src="{{ recipe_data.image }}" alt="{{ recipe_data.title }}'s Recipe Image" class="img-fluid rounded" />
+        </div>
+        <h2 class="text-center">Ingredients: <i class="fa-solid fa-book-open"></i></h2>
+        <ul class="list-unstyled text-center">
+          {% for ingredient in recipe_data.extendedIngredients %}
+          <li>{{ ingredient.original }}</li>
+          {% endfor %}
+        </ul>
+        <div class="text-center">
+          <a class="btn main-btn mb-2" href="#">View Instructions</a>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
