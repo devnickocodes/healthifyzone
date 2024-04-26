@@ -26,6 +26,18 @@
               <p class="card-text">
                   {{ article.content | safe }}
               </p>
+              <!-- Article Likes -->
+              {% if user.is_authenticated %}
+              <button class="likes" data-articleid="{{ article.id }}" data-likescount="{{ article.article_likes_count }}" data-like-url="{% url 'like_article' %}">
+                <i class="fa-sharp fa-solid fa-heart m-2 {% if request.user.is_authenticated and request.user in article.article_likes.all %}liked{% endif %}"></i>
+                <span class="article-likes-count">{{ article.article_likes_count }}</span>
+            </button>
+              {% else %}
+              <button class="likes" data-toggle="popover" title="Please sign up or log in to like comments." data-trigger="click">
+                <i class="fa-sharp fa-solid fa-heart m-2"></i>
+                <span class="article-likes-count">{{ article.article_likes_count }}</span>
+            </button>
+              {% endif %}
           </div>
       </div>
   </div>

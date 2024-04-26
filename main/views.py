@@ -132,4 +132,3 @@ def like_comment(request):
         return JsonResponse({'result': result})
     
     return JsonResponse({'error': 'Invalid request method or action'}, status=400)
-
