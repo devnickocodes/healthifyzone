@@ -132,3 +132,22 @@ def like_comment(request):
         return JsonResponse({'result': result})
     
     return JsonResponse({'error': 'Invalid request method or action'}, status=400)
+
+@login_required
+def like_article(request):
+    if request.POST.get('action') == 'post':
+        article_id = int(request.POST.get('articleid'))
+        article = get_object_or_404(Article, id=article_id)
+        
+        if article.article_likes.filter(id=request.user.id).exists():
+            article.article_likes.remove(request.user)
+            article.article_likes_count -= 1
+        else:
+            article.article_likes.add(request.user)
+            article.article_likes_count += 1
+        
+        article.save()
+        result = article.article_likes_count
+        return JsonResponse({'result': result})
+    
+    return JsonResponse({'error': 'Invalid request method or action'}, status=400)

@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.DisplayArticles.as_view(), name='homepage'),
     path('like_comment/', views.like_comment, name='like_comment'),
+    path('like_article/', views.like_article, name='like_article'),
     path('categories/', views.DisplayCategories.as_view(), name='categories'),
     path('<slug:article_slug>/', views.view_article, name='view_article'),
     path('<slug:article_slug>/edit_comment/<int:comment_id>/',
