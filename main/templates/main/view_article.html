@@ -27,17 +27,17 @@
                   {{ article.content | safe }}
               </p>
               <!-- Article Likes -->
-              {% if user.is_authenticated %}
-              <button class="likes" data-articleid="{{ article.id }}" data-likescount="{{ article.article_likes_count }}" data-like-url="{% url 'like_article' %}">
-                <i class="fa-sharp fa-solid fa-heart m-2 {% if request.user.is_authenticated and request.user in article.article_likes.all %}liked{% endif %}"></i>
-                <span class="article-likes-count">{{ article.article_likes_count }}</span>
-            </button>
-              {% else %}
-              <button class="likes" data-toggle="popover" title="Please sign up or log in to like comments." data-trigger="click">
-                <i class="fa-sharp fa-solid fa-heart m-2"></i>
-                <span class="article-likes-count">{{ article.article_likes_count }}</span>
-            </button>
-              {% endif %}
+                {% if user.is_authenticated %}
+                <button class="article-likes" data-articleid="{{ article.id }}" data-likescount="{{ article.article_likes_count }}" data-like-url="{% url 'like_article' %}">
+                    <i class="fa-sharp fa-solid fa-heart m-2 {% if request.user.is_authenticated and request.user in article.article_likes.all %}liked{% endif %}"></i>
+                    <span class="article-likes-count">{{ article.article_likes_count }}</span>
+                </button>
+                {% else %}
+                <button class="article-likes" data-toggle="popover" title="Please sign up or log in to like articles." data-trigger="click">
+                    <i class="fa-sharp fa-solid fa-heart m-2"></i>
+                    <span class="article-likes-count">{{ article.article_likes_count }}</span>
+                </button>
+                {% endif %}
           </div>
       </div>
   </div>
@@ -55,17 +55,17 @@
                     <div class="ml-auto">
                       {% if comment.approved %}
                         <!-- Comment Likes -->
-                        {% if user.is_authenticated %}
-                        <button class="likes" data-commentid="{{ comment.id }}" data-likescount="{{ comment.comment_likes_count }}" data-like-url="{% url 'like_comment' %}">
-                          <i class="fa-sharp fa-solid fa-heart m-2 {% if request.user.is_authenticated and request.user in comment.comment_likes.all %}liked{% endif %}"></i>
-                          <span class="comment-likes-count">{{ comment.comment_likes_count }}</span>
-                      </button>
-                        {% else %}
-                        <button class="likes" data-toggle="popover" title="Please sign up or log in to like comments." data-trigger="click">
-                          <i class="fa-sharp fa-solid fa-heart m-2"></i>
-                          <span class="comment-likes-count">{{ comment.comment_likes_count }}</span>
-                      </button>
-                        {% endif %}
+                          {% if user.is_authenticated %}
+                          <button class="comment-likes" data-commentid="{{ comment.id }}" data-likescount="{{ comment.comment_likes_count }}" data-like-url="{% url 'like_comment' %}">
+                              <i class="fa-sharp fa-solid fa-heart m-2 {% if request.user.is_authenticated and request.user in comment.comment_likes.all %}liked{% endif %}"></i>
+                              <span class="comment-likes-count">{{ comment.comment_likes_count }}</span>
+                          </button>
+                          {% else %}
+                          <button class="comment-likes" data-toggle="popover" title="Please sign up or log in to like comments." data-trigger="click">
+                              <i class="fa-sharp fa-solid fa-heart m-2"></i>
+                              <span class="comment-likes-count">{{ comment.comment_likes_count }}</span>
+                          </button>
+                          {% endif %}
                         {% endif %}
                   </div>
                 </div>
@@ -146,7 +146,8 @@
 
 {% if user.is_authenticated %}
 {% block extras %}
-<script src="{% static 'js/comment_likes.js' %}"></script>
+<script src="{% static 'js/ajax_comment_likes.js' %}"></script>
+<script src="{% static 'js/ajax_article_likes.js' %}"></script>
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
 {%endif%}
