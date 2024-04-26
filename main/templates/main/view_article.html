@@ -144,11 +144,11 @@
     </div>
   </div>
 
-{% if user.is_authenticated %}
 {% block extras %}
+{% if user.is_authenticated %}
 <script src="{% static 'js/ajax_comment_likes.js' %}"></script>
 <script src="{% static 'js/ajax_article_likes.js' %}"></script>
+{% endif %}
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
-{%endif%}
 {% endblock content %}
