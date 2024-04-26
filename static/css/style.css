@@ -257,3 +257,35 @@ h2{
 
 /* Recipe Detail Page */
 
+.recipe-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+}
+
+.recipe-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.recipe-info-item {
+    font-size: 16px;
+    color: #555;
+}
+
+.recipe-bg {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}

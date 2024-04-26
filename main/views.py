@@ -79,6 +79,7 @@ def view_by_category(request, category_slug):
         {'articles': articles, 'category': category}
     )
 
+@login_required
 def edit_comment(request, article_slug, comment_id):
 
     if request.method == "POST":
@@ -100,6 +101,7 @@ def edit_comment(request, article_slug, comment_id):
 
     return HttpResponseRedirect(reverse('view_article', args=[article_slug]))
 
+@login_required
 def delete_comment(request, article_slug, comment_id):
 
     comment = get_object_or_404(Comment, pk=comment_id)
