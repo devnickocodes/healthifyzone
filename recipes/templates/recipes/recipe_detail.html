@@ -18,12 +18,28 @@
                 <h2 class="text-center">Ingredients: <i class="fa-solid fa-book-open"></i></h2>
                 <ul class="list-unstyled">
                     {% for ingredient in recipe_data.extendedIngredients %}
-                    <li>{{ ingredient.original }}</li>
+                        <li>{{ ingredient.original }}</li>
                     {% endfor %}
                 </ul>
             </div>
             <div class="text-center">
-                <a class="btn main-btn mb-2" href="#">View Instructions</a>
+                <button class="btn main-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    View Instructions
+                </button>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body m-2">
+                    {% if instructions_data %}
+                        <h2>Recipe Instructions:</h2>
+                        <ol>
+                            {% for step in instructions_data.0.steps %}
+                                <li>{{ step.step }}</li>
+                            {% endfor %}
+                        </ol>
+                    {% else %}
+                        <p>No instructions available.</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
