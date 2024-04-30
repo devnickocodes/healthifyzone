@@ -34,17 +34,28 @@ def recipe_search_results(request):
         return HttpResponse("No query provided for recipe search")
     return HttpResponse("Invalid request method")
 
-def recipe_detail(request, recipe_id):
-    endpoint = f'https://api.spoonacular.com/recipes/{recipe_id}/information'
-    params = {
+def recipe_detail_with_instructions(request, recipe_id):
+    detail_endpoint = f'https://api.spoonacular.com/recipes/{recipe_id}/information'
+    detail_params = {
+        'apiKey': SPOONACULAR_API_KEY
+    }
+
+    instructions_endpoint = f'https://api.spoonacular.com/recipes/{recipe_id}/analyzedInstructions'
+    instructions_params = {
         'apiKey': SPOONACULAR_API_KEY
     }
     try:
-        response = requests.get(endpoint, params=params, timeout=15)
-        response.raise_for_status()
-        recipe_data = response.json()
+        detail_response = requests.get(detail_endpoint, params=detail_params, timeout=10)
+        detail_response.raise_for_status()
+        recipe_data = detail_response.json()
+
+        instructions_response = requests.get(instructions_endpoint, params=instructions_params, timeout=10)
+        instructions_response.raise_for_status()
+        instructions_data = instructions_response.json()
+
         context = {
-            'recipe_data': recipe_data
+            'recipe_data': recipe_data,
+            'instructions_data': instructions_data
         }
         return render(request, 'recipes/recipe_detail.html', context)
     except requests.RequestException as e:
