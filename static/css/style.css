@@ -39,7 +39,8 @@ h2{
 
 .category-header,
 .reg-header,
-.login-header{
+.login-header,
+.pass-reset-header{
     border-radius: 0% 0% 50% 50%;
     background-color: rgb(82, 153, 41);
     color: rgb(255, 255, 255);
