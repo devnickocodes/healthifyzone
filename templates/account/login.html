@@ -26,7 +26,7 @@
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
               {% endif %}
               <button class="btn main-btn right mb-3" type="submit">{% trans "Sign In" %}</button>
-              <p>Forgotten password? <a href="{% url 'reset_password' %}">click here</a></p>
+              <p>Forgotten password? <a class="forgotten-pass-link" href="{% url 'reset_password' %}">click here</a></p>
           </form>
       </div>
   </div>

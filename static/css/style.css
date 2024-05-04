@@ -23,7 +23,8 @@ h2{
 /* Links */
 
 .register-link,
-.log-in-link{
+.log-in-link,
+.forgotten-pass-link{
     text-decoration: none;
     color: rgba(30,70,7,1);
     font-weight: 600;
@@ -32,7 +33,8 @@ h2{
 }
 
 .register-link:hover,
-.log-in-link:hover{
+.log-in-link:hover,
+.forgotten-pass-link:hover{
     color: rgba(30,70,7,1);
     text-decoration-line: underline;
 }
