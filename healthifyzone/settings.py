@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-devnickocodes-healthifyz-x331i3shha.us1.codeanyapp.com',
+    '*.codeanyapp.com',
 ]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
