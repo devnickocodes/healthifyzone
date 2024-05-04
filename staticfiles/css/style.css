@@ -22,9 +22,7 @@ h2{
 
 /* Links */
 
-.register-link,
-.log-in-link,
-.forgotten-pass-link{
+.link{
     text-decoration: none;
     color: rgba(30,70,7,1);
     font-weight: 600;
@@ -32,17 +30,15 @@ h2{
     text-decoration-line: underline;
 }
 
-.register-link:hover,
-.log-in-link:hover,
-.forgotten-pass-link:hover{
+.link:hover{
     color: rgba(30,70,7,1);
     text-decoration-line: underline;
 }
 
-.category-header,
+/* Headers */
+
+.header,
 .reg-header,
-.login-header,
-.pass-reset-header,
 .reset-pass-header{
     border-radius: 0% 0% 50% 50%;
     background-color: rgb(82, 153, 41);
@@ -50,11 +46,6 @@ h2{
     -webkit-box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
     -moz-box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
     box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
-}
-
-.category-header,
-.login-header{
-    font-size: 2em;
 }
 
 .reg-header{
