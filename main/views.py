@@ -11,14 +11,49 @@ from .forms import CommentForm
 # Create your views here.
 
 class DisplayArticles(generic.ListView):
-    
+    """
+    Display a list of approved articles ordered by the created_on field in descending order.
+
+    **Context**
+
+    ``queryset``
+        A queryset containing approved articles ordered by the created_on field in descending order.
+
+    **Template:**
+
+    :template:`main/index.html`
+    """
     queryset = Article.objects.filter(approved=True).order_by("-created_on")
     template_name = 'main/index.html'
-    paginate_by = 6 
+    paginate_by = 6
 
 
 def view_article(request, article_slug):
+    """
+    Display an individual article and its comments.
 
+    **Context**
+
+    ``queryset``
+        A queryset of approved articles.
+        
+    ``article``
+        An instance of :model:`main.Article` based on the article slug.
+
+    ``comments``
+        A queryset containing all comments related to the article, ordered by the created_on field in descending order.
+
+    ``comment_count``
+        The count of approved comments related to the article.
+
+    ``comment_form``
+        A form for submitting comments or editing existing comments.
+
+
+    **Template:**
+
+    :template:`main/view_article.html`
+    """
     queryset = Article.objects.filter(approved=True)
     article = get_object_or_404(queryset, article_slug=article_slug)
 
@@ -53,13 +88,43 @@ def view_article(request, article_slug):
     )
 
 class DisplayCategories(generic.ListView):
+    """
+    Display a list of approved categories.
 
+    **Context**
+
+    ``queryset``
+        A queryset containing approved categories.
+
+    **Template:**
+
+    :template:`main/categories.html`
+    """
     queryset = Category.objects.filter(approved=True)
 
     template_name = 'main/categories.html'
 
 
 def view_by_category(request, category_slug):
+    """
+    Display articles belonging to a specific category.
+
+    **Context**
+
+    ``articles_related_to_category``
+        A paginated list of articles related to the category.
+
+    ``category``
+        An instance of :model:`main.Category` based on the category slug.
+
+    **Template:**
+
+    :template:`main/articles_by_category.html`
+
+    **Pagination:**
+
+    This view paginates the articles related to the category with 4 articles per page.
+    """
     category = Category.objects.get(category_slug=category_slug)
     articles_related_to_category = category.article_set.all()
 
@@ -81,7 +146,21 @@ def view_by_category(request, category_slug):
 
 @login_required
 def edit_comment(request, article_slug, comment_id):
+    """
+    Edit a comment associated with an article.
 
+    **Context**
+
+    ``article``
+        An instance of :model:`main.Article`.
+
+    ``comment``
+        An instance of :model:`main.Comment`.
+
+    **Template:**
+
+    :template:`main/view_article.html`
+    """
     if request.method == "POST":
 
         queryset = Article.objects.all()
@@ -103,7 +182,13 @@ def edit_comment(request, article_slug, comment_id):
 
 @login_required
 def delete_comment(request, article_slug, comment_id):
+    """
+    Delete a comment associated with an article.
 
+    **Template:**
+
+    :template:`main/view_article.html`
+    """
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.comment_author == request.user or request.user.is_superuser:
@@ -116,6 +201,13 @@ def delete_comment(request, article_slug, comment_id):
 
 @login_required
 def like_comment(request):
+    """
+    Like or unlike a comment.
+
+    **Template:**
+
+    :template:`main/view_article.html`
+    """
     if request.POST.get('action') == 'post':
         comment_id = int(request.POST.get('commentid'))
         comment = get_object_or_404(Comment, id=comment_id)
@@ -135,6 +227,13 @@ def like_comment(request):
 
 @login_required
 def like_article(request):
+    """
+    Like or unlike an article.
+
+    **Template:**
+
+    :template:`main/view_article.html`
+    """
     if request.POST.get('action') == 'post':
         article_id = int(request.POST.get('articleid'))
         article = get_object_or_404(Article, id=article_id)
