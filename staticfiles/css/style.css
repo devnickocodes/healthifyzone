@@ -23,7 +23,8 @@ h2{
 /* Links */
 
 .register-link,
-.log-in-link{
+.log-in-link,
+.forgotten-pass-link{
     text-decoration: none;
     color: rgba(30,70,7,1);
     font-weight: 600;
@@ -32,14 +33,17 @@ h2{
 }
 
 .register-link:hover,
-.log-in-link:hover{
+.log-in-link:hover,
+.forgotten-pass-link:hover{
     color: rgba(30,70,7,1);
     text-decoration-line: underline;
 }
 
 .category-header,
 .reg-header,
-.login-header{
+.login-header,
+.pass-reset-header,
+.reset-pass-header{
     border-radius: 0% 0% 50% 50%;
     background-color: rgb(82, 153, 41);
     color: rgb(255, 255, 255);
@@ -211,7 +215,8 @@ h2{
     border: 1px solid rgba(51, 51, 51, 0.4);
 }
 
-.likes{
+.comment-likes,
+.article-likes{
     font-size: 18px;
     border: 1px solid rgb(51, 51, 51);
     border-radius: 20px;
@@ -257,3 +262,35 @@ h2{
 
 /* Recipe Detail Page */
 
+.recipe-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+}
+
+.recipe-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.recipe-info-item {
+    font-size: 16px;
+    color: #555;
+}
+
+.recipe-bg {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
