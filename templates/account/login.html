@@ -13,7 +13,7 @@
           <h1 class="text-center mb-5 py-2 login-header">{% trans "Sign In" %}</h1>
 
           <p class="lead">{% trans "Welcome back to the HealthifyZone blog. To participate in discussions, view users profiles or interact with posts, please sign in. If you haven't registered yet, then" %}
-          <a class="link register-link" href="{% url 'register' %}">{% trans "sign up" %}</a>
+          <a class="link link" href="{% url 'register' %}">{% trans "sign up" %}</a>
           {% trans "first." %}
       </div>
   </div>
@@ -26,7 +26,7 @@
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
               {% endif %}
               <button class="btn main-btn right mb-3" type="submit">{% trans "Sign In" %}</button>
-              <p>Forgotten password? <a class="forgotten-pass-link" href="{% url 'reset_password' %}">click here</a></p>
+              <p>Forgotten password? <a class="link" href="{% url 'reset_password' %}">click here</a></p>
           </form>
       </div>
   </div>
