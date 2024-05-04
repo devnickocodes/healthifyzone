@@ -7,7 +7,9 @@ from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
-
+    """
+    Stores a single category entry related to :model:`users.CustomUser`.
+    """
     title = models.CharField(max_length=150, blank=False)
     subtitle = models.CharField(max_length=200, blank=False)
     category_slug = models.SlugField(null=False, blank=False, unique=True)
@@ -17,7 +19,14 @@ class Category(models.Model):
     featured_category_image = CloudinaryField('image', default='placeholder.jpeg')
 
     class Meta:
+        """
+        Meta class for Category model.
 
+        Attributes:
+            verbose_name_plural: A human-readable name for the object in plural form.
+            ordering: Specifies the default ordering of records when queried from the database.
+                      Records will be ordered by the created_on field in descending order.
+        """
         verbose_name_plural = "Categories"
         ordering = ["-created_on"]
 
@@ -27,6 +36,10 @@ class Category(models.Model):
 
 
 class Article(models.Model):
+    """
+    Stores a single article entry related to :model:`users.CustomUser`.
+    And :model:`main.Category`
+    """
 
     title = models.CharField(max_length=200, blank=False)
     subtitle = models.CharField(max_length=200, blank=False)
@@ -43,13 +56,23 @@ class Article(models.Model):
 
 
     class Meta:
+        """
+        Meta class for Article model.
 
+        Attributes:
+            ordering: Specifies the default ordering of records when queried from the database.
+                      Records will be ordered by the created_on field in descending order.
+        """
         ordering = ["-created_on"]
 
     def __str__(self):
 
         return f'Article title: {self.title}'
 class Comment(models.Model):
+    """
+    Stores a single comment entry related to :model:`users.CustomUser`.
+    And :model:`main.Article`
+    """
 
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name="comments")
     body = models.TextField(blank=False)
@@ -60,6 +83,13 @@ class Comment(models.Model):
     comment_likes_count = models.BigIntegerField(default=0)
 
     class Meta:
+        """
+        Meta class for Comment model.
+
+        Attributes:
+            ordering: Specifies the default ordering of records when queried from the database.
+                      Records will be ordered by the created_on field in descending order.
+        """
         ordering = ["-created_on"]
 
     def __str__(self):
