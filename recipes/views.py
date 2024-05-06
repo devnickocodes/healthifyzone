@@ -6,9 +6,31 @@ import requests
 SPOONACULAR_API_KEY = os.environ.get('SPOONACULAR_API_KEY')
 
 def recipe_search(request):
+    """
+    Render the page for searching recipes.
+
+    **Template:**
+
+    :template:`recipes/recipe_search.html`
+    """
     return render(request, 'recipes/recipe_search.html')
 
 def recipe_search_results(request):
+    """
+    Fetch and display the search results for recipes.
+
+    **Context**
+
+    ``query``
+        The search query provided by the user.
+
+    ``recipes``
+        A list of recipe search results.
+
+    **Template:**
+
+    :template:`recipes/recipes_search_results.html`
+    """
     if request.method == 'GET':
         query = request.GET.get('query')
         if query:
@@ -35,6 +57,21 @@ def recipe_search_results(request):
     return HttpResponse("Invalid request method")
 
 def recipe_detail_with_instructions(request, recipe_id):
+    """
+    Fetch and display the details of a recipe along with its instructions.
+
+    **Context**
+
+    ``recipe_data``
+        Details of the recipe fetched from Spoonacular API.
+
+    ``instructions_data``
+        Instructions for preparing the recipe fetched from Spoonacular API.
+
+    **Template:**
+
+    :template:`recipes/recipe_detail.html`
+    """
     detail_endpoint = f'https://api.spoonacular.com/recipes/{recipe_id}/information'
     detail_params = {
         'apiKey': SPOONACULAR_API_KEY
