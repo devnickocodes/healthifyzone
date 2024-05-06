@@ -6,6 +6,19 @@ from .forms import UserRegistrationForm, userUpdateProfileForm
 # Create your views here.
 
 def register(request):
+    """
+    View for registering a new user.
+
+    **Context:**
+
+    - ``form``: An instance of :class:`~users.forms.UserRegistrationForm`.
+
+    **Template:**
+
+    - ``users/register.html``: The registration form template.
+    - ``account/login.html``: The login form template.
+
+    """
     if request.method == "POST":
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
@@ -26,6 +39,20 @@ def register(request):
 
 @login_required
 def view_profile(request, username):
+    """
+    View to view a user profile or display a 'User Not Found Page' if the user doesn't exist.
+
+    **Context:**
+
+    - ``form``: An instance of :class:`~users.forms.UserUpdateProfileForm`.
+    - ``user``: The user whose profile is being viewed.
+
+    **Template:**
+
+    - ``users/profile_page.html``: The user profile page template.
+    - ``users/user_not_found.html``: Template for when the requested user does not exist.
+
+    """
     if request.method == "POST":
         user = request.user
         form = userUpdateProfileForm(request.POST, request.FILES, instance=user)
