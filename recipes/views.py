@@ -5,6 +5,7 @@ import requests
 
 SPOONACULAR_API_KEY = os.environ.get('SPOONACULAR_API_KEY')
 
+
 def recipe_search(request):
     """
     Render the page for searching recipes.
@@ -14,6 +15,7 @@ def recipe_search(request):
     :template:`recipes/recipe_search.html`
     """
     return render(request, 'recipes/recipe_search.html')
+
 
 def recipe_search_results(request):
     """
@@ -50,11 +52,14 @@ def recipe_search_results(request):
                     'recipes': results,
                     'addRecipeInformation': 'true',
                 }
-                return render(request, 'recipes/recipes_search_results.html', context)
+                return render(request, 'recipes/recipes_search_results.html',
+                              context)
             except requests.RequestException as e:
-                return HttpResponse(f"Failed to fetch recipe search results: {e}")
+                return HttpResponse(f"Failed to fetch recipe \
+                search results: {e}")
         return HttpResponse("No query provided for recipe search")
     return HttpResponse("Invalid request method")
+
 
 def recipe_detail_with_instructions(request, recipe_id):
     """
@@ -72,21 +77,28 @@ def recipe_detail_with_instructions(request, recipe_id):
 
     :template:`recipes/recipe_detail.html`
     """
-    detail_endpoint = f'https://api.spoonacular.com/recipes/{recipe_id}/information'
+    detail_endpoint = (
+                f'https://api.spoonacular.com/recipes/{recipe_id}/information'
+    )
     detail_params = {
         'apiKey': SPOONACULAR_API_KEY
     }
 
-    instructions_endpoint = f'https://api.spoonacular.com/recipes/{recipe_id}/analyzedInstructions'
+    instructions_endpoint = (
+        f'https://api.spoonacular.com/recipes/{recipe_id}/analyzedInstructions'
+    )
     instructions_params = {
         'apiKey': SPOONACULAR_API_KEY
     }
     try:
-        detail_response = requests.get(detail_endpoint, params=detail_params, timeout=10)
+        detail_response = requests.get(detail_endpoint,
+                                       params=detail_params, timeout=10)
         detail_response.raise_for_status()
         recipe_data = detail_response.json()
 
-        instructions_response = requests.get(instructions_endpoint, params=instructions_params, timeout=10)
+        instructions_response = requests.get(instructions_endpoint,
+                                             params=instructions_params,
+                                             timeout=10)
         instructions_response.raise_for_status()
         instructions_data = instructions_response.json()
 
