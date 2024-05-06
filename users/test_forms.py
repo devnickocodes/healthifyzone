@@ -4,6 +4,7 @@ from .forms import UserRegistrationForm
 
 # Create your tests here.
 
+
 class TestUserRegistrationForm(TestCase):
 
     def test_form_initialization(self):
@@ -23,17 +24,16 @@ class TestUserRegistrationForm(TestCase):
         form = UserRegistrationForm(data={'email': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('email', form.errors)
-    
+
     def test_username_max_length(self):
         form = UserRegistrationForm(data={'username': 'a' * 17})
         self.assertFalse(form.is_valid())
         self.assertIn('username', form.errors)
-    
+
     def test_username_min_length(self):
         form = UserRegistrationForm(data={'username': 'a'})
         self.assertFalse(form.is_valid())
         self.assertIn('username', form.errors)
-
 
     def test_valid_data(self):
         form_data = {
@@ -52,9 +52,9 @@ class TestUserRegistrationForm(TestCase):
             'first_name': 'John',
             'last_name': 'Doe',
             'username': 'johndoe',
-            'email': 'invalidemail',  # Invalid email format
-            'password1': 'password', # Weak password
-            'password2': 'password', # Weak password
+            'email': 'invalidemail',
+            'password1': 'password',
+            'password2': 'password',
         }
         form = UserRegistrationForm(data=form_data)
         self.assertFalse(form.is_valid())
@@ -64,12 +64,16 @@ class TestUserRegistrationForm(TestCase):
         form = UserRegistrationForm(data={'username': 'janedoe123'})
         form.is_valid()
         self.assertEqual(form.clean_username(), 'janedoe123')
-    
+
     def test_clean_username_invalid(self):
         invalid_usernames = ['johndoe@', 'john doe', 'johndoe$%^']
         for username in invalid_usernames:
             form = UserRegistrationForm(data={'username': username})
             self.assertFalse(form.is_valid())
-            if 'username' in form.cleaned_data: 
-                with self.assertRaisesMessage(forms.ValidationError, 'Username can only contain letters, numbers, and underscores.'):
+            if 'username' in form.cleaned_data:
+                with self.assertRaisesMessage(
+                    forms.ValidationError,
+                    'Username can only contain letters, numbers,'
+                    'and underscores.'
+                ):
                     form.clean_username()
