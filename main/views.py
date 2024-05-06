@@ -1,5 +1,4 @@
 # pylint: disable=no-member
-# pylint: disable=missing-docstring
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -8,16 +7,20 @@ from django.http import HttpResponseRedirect, JsonResponse
 from django.contrib.auth.decorators import login_required
 from .models import Article, Category, Comment
 from .forms import CommentForm
+
 # Create your views here.
+
 
 class DisplayArticles(generic.ListView):
     """
-    Display a list of approved articles ordered by the created_on field in descending order.
+    Display a list of approved articles
+    ordered by the created_on field in descending order.
 
     **Context**
 
     ``queryset``
-        A queryset containing approved articles ordered by the created_on field in descending order.
+        A queryset containing approved articles
+        ordered by the created_on field in descending order.
 
     **Template:**
 
@@ -36,12 +39,13 @@ def view_article(request, article_slug):
 
     ``queryset``
         A queryset of approved articles.
-        
+
     ``article``
         An instance of :model:`main.Article` based on the article slug.
 
     ``comments``
-        A queryset containing all comments related to the article, ordered by the created_on field in descending order.
+        A queryset containing all comments related to the article,
+        ordered by the created_on field in descending order.
 
     ``comment_count``
         The count of approved comments related to the article.
@@ -60,7 +64,6 @@ def view_article(request, article_slug):
     comments = article.comments.all().order_by("-created_on")
     comment_count = article.comments.filter(approved=True).count()
 
-    
     comment_form = CommentForm()
 
     if request.method == "POST":
@@ -82,10 +85,11 @@ def view_article(request, article_slug):
         request,
         "main/view_article.html",
         {"article": article,
-        "comments": comments,
-        "comment_count": comment_count,
-        "comment_form": comment_form},
+         "comments": comments,
+         "comment_count": comment_count,
+         "comment_form": comment_form},
     )
+
 
 class DisplayCategories(generic.ListView):
     """
@@ -123,13 +127,14 @@ def view_by_category(request, category_slug):
 
     **Pagination:**
 
-    This view paginates the articles related to the category with 4 articles per page.
+    This view paginates the articles related to the category
+    with 4 articles per page.
     """
     category = Category.objects.get(category_slug=category_slug)
     articles_related_to_category = category.article_set.all()
 
     # Pagination
-    paginator = Paginator(articles_related_to_category, 4)  
+    paginator = Paginator(articles_related_to_category, 4)
     page_number = request.GET.get('page')
     try:
         articles = paginator.page(page_number)
@@ -143,6 +148,7 @@ def view_by_category(request, category_slug):
         'main/articles_by_category.html',
         {'articles': articles, 'category': category}
     )
+
 
 @login_required
 def edit_comment(request, article_slug, comment_id):
@@ -169,16 +175,18 @@ def edit_comment(request, article_slug, comment_id):
         comment_form = CommentForm(data=request.POST, instance=comment)
 
         if comment_form.is_valid() and comment.comment_author == request.user:
-            
+
             comment = comment_form.save(commit=False)
             comment.article = article
             comment.approved = False
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('view_article', args=[article_slug]))
+
 
 @login_required
 def delete_comment(request, article_slug, comment_id):
@@ -195,9 +203,11 @@ def delete_comment(request, article_slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('view_article', args=[article_slug]))
+
 
 @login_required
 def like_comment(request):
@@ -211,19 +221,21 @@ def like_comment(request):
     if request.POST.get('action') == 'post':
         comment_id = int(request.POST.get('commentid'))
         comment = get_object_or_404(Comment, id=comment_id)
-        
+
         if comment.comment_likes.filter(id=request.user.id).exists():
             comment.comment_likes.remove(request.user)
             comment.comment_likes_count -= 1
         else:
             comment.comment_likes.add(request.user)
             comment.comment_likes_count += 1
-        
+
         comment.save()
         result = comment.comment_likes_count
         return JsonResponse({'result': result})
-    
-    return JsonResponse({'error': 'Invalid request method or action'}, status=400)
+
+    return JsonResponse({'error': 'Invalid request method or action'},
+                        status=400)
+
 
 @login_required
 def like_article(request):
@@ -237,16 +249,17 @@ def like_article(request):
     if request.POST.get('action') == 'post':
         article_id = int(request.POST.get('articleid'))
         article = get_object_or_404(Article, id=article_id)
-        
+
         if article.article_likes.filter(id=request.user.id).exists():
             article.article_likes.remove(request.user)
             article.article_likes_count -= 1
         else:
             article.article_likes.add(request.user)
             article.article_likes_count += 1
-        
+
         article.save()
         result = article.article_likes_count
         return JsonResponse({'result': result})
-    
-    return JsonResponse({'error': 'Invalid request method or action'}, status=400)
+
+    return JsonResponse({'error': 'Invalid request method or action'},
+                        status=400)
