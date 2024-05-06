@@ -1,3 +1,4 @@
+/* jshint esversion: 11 */
 document.addEventListener("DOMContentLoaded", function () {
 
     const editButtons = document.getElementsByClassName("edit-btn");
@@ -7,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const collapsibleSection = document.getElementById("collapseExample");
 
     const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
-    const deleteButtons = document.getElementsByClassName("delete-btn");
     const deleteConfirm = document.getElementById("deleteConfirm");
 
     // Toggle popover if a non autheticated user tries to like a comment
