@@ -31,9 +31,7 @@
                         <p class="card-text text-center"><a class="author" href="{% url 'view_profile' article.article_author%}">{{article.article_author}}</a> | {{article.created_on |date:"F d, Y" }}</p>
                     </div>
                     <div class="text-center">
-                        <a href="{% url 'view_article' article.article_slug %}">
-                            <button type="button" class="btn main-btn" data-mdb-ripple-init>View Article</button>
-                        </a>
+                        <a href="{% url 'view_article' article.article_slug %}" class="btn main-btn" data-mdb-ripple-init>View Article</a>
                     </div>
                 </div>
             </div>

@@ -23,13 +23,10 @@
                             <p class="card-text text-center"><a class="author" href="{% url 'view_profile' category.category_author%}">{{category.category_author}}</a> | {{category.created_on |date:"F d, Y" }}</p>
                         </div>
                         <div class="text-center">
-                            <a href="{% url 'view_by_category' category.category_slug %}">
-                                <button type="button" class="btn main-btn" data-mdb-ripple-init>View Category</button>
-                            </a>
+                            <a href="{% url 'view_by_category' category.category_slug %}" class="btn main-btn" data-mdb-ripple-init>View Category</a>
                         </div>
                     </div>
                 </div>
-            </a>
         </div>
         {% endfor %}
     </div> 
