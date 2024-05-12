@@ -10,7 +10,7 @@ For the colors, I decided to keep it thematic and mainly stick with different sh
 
 ### **Colour Scheme**
 
-I am using [Coolors.co](https://coolors.co/f5df99-fccbbc-16a7ac-9497f0-ffbf49-fde1d6-ff0000-054ff0-4a6aa0-00ccff) to showcase the color scheme of the website.
+I am using [Coolors.co](https://coolors.co/dff8df-1e4607-529929-76d176-6aad6a-333333-800080-fd5a5a-a89f9f) to showcase the color scheme of the website.
 
 ![Colour Scheme](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/healthifyzone_color_scheme.png)
 
