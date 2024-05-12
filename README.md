@@ -20,7 +20,7 @@ I imported the font for the website from [Google Fonts](https://fonts.google.com
 
 ![Typography - Inter](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/website_font.png)
 
-## User Stories
+## **User Stories**
 
 ### Users
 
@@ -62,3 +62,7 @@ I imported the font for the website from [Google Fonts](https://fonts.google.com
 - As a Site Admin I can Delete Blog Posts so that I can monitor the blog's content.
 - As a Site Admin I can delete comments on the website so that I can remove inappropriate or spam comments.
 - As a Site Admin I can I can create, read, update and delete posts so that I can decide what content I can upload to the website.
+
+## **Wireframes**
+
+The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
