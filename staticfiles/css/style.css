@@ -228,26 +228,38 @@ h2{
 
 .delete-btn{
     background-color: rgb(253, 90, 90);
+    border: 2px solid rgb(253, 90, 90);
+}
+
+.delete-btn:hover{
+    background-color: rgb(255,255,255);
+    border: 2px solid rgb(253, 90, 90);
 }
 
 .edit-btn{
     background-color: rgb(168, 159, 159);
+    border: 2px solid rgb(168, 159, 159);
+}
+
+.edit-btn:hover{
+    background-color: rgb(255,255,255);
+    border: 2px solid rgb(168, 159, 159);
 }
 
 /* Link to author profile page */
 .author{
     text-decoration: none;
-    color: #B4E4CE;
+    color: rgb(180, 228, 206);
     font-weight: 600;
-    background-color: #303030;
+    background-color: rgb(48, 48, 48);
     border-radius: 3px;
     padding: 4px;
 }
 
 .author:hover{
     text-decoration: none;
-    color: #303030;
-    background-color: #B4E4CE;
+    color: rgb(48, 48, 48);
+    background-color: rgb(180, 228, 206);
     font-weight: 600;
 }
 
