@@ -67,7 +67,51 @@ I imported the font for the website from [Google Fonts](https://fonts.google.com
 
 The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
+### Home Page Wireframe
+
+![Homepage wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/homepage_wireframe.png)
+
+### Category Wireframe
+
+![Category wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/categories_wireframe.png)
+
+### Recipe Search Wireframe
+
+![Recipe Search wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_search_wireframe.png)
+
+### Recipe Results Wireframe
+
+![Recipe Results wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_results_wireframe.png)
+
+### View Recipe Details Wireframe
+
+![View Recipe Details wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_recipe_wireframe.png)
+
+### View Recipe Details Wireframe
+
+![View Recipe Details wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_recipe_wireframe.png)
+
+### View Article Wireframe
+
+![View Article wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_article_wireframe.png)
+
+### View Article by Category Wireframe
+
+![Article by Category wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/articles_by_category.png)
+
+### Profile Wireframe
+
+![Profile wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/profile_wireframe.png)
+
+### Sign Up Wireframe
+
+![Sign Up wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/sign_up_wireframe.png)
+
+### Log In Wireframe
+
+![Log In wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/login_wireframe.png)
 
 
+### Log Out Wireframe
 
-
+![Log Out wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/logout_wireframe.png)
