@@ -31,8 +31,8 @@ CSRF_TRUSTED_ORIGINS = [
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEBUG' in os.environ
-DEBUG = False
+DEBUG = 'DEBUG' in os.environ
+
 ALLOWED_HOSTS = [
     '8000-devnickocodes-healthifyz-x331i3shha.us1.codeanyapp.com',
     '.herokuapp.com'
