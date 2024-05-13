@@ -19,15 +19,23 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.conf.urls import handler403, handler404, handler500
 from django.shortcuts import render
+from django.core.exceptions import PermissionDenied
 from users import views as user_views
+
+def test_403_view(request):
+    raise PermissionDenied
 
 def custom_404(request, exception):
     return render(request, '404.html', status=404)
 
+def custom_403(request, exception):
+    return render(request, '403.html', status=403)
 
 handler404 = 'healthifyzone.urls.custom_404'
+handler403 = 'healthifyzone.urls.custom_403'
 
 urlpatterns = [
+    path('test403/', test_403_view, name='test_403'),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
