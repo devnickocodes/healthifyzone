@@ -22,12 +22,21 @@ from django.shortcuts import render
 from users import views as user_views
 
 def custom_404(request, exception):
+    """
+    Render a custom 404 error page.
+    """
     return render(request, '404.html', status=404)
 
 def custom_403(request, exception):
+    """
+    Render a custom 403 error page.
+    """
     return render(request, '403.html', status=403)
 
 def custom_500(request):
+    """
+    Render a custom 500 error page.
+    """
     return render(request, '500.html', status=500)
 
 handler404 = 'healthifyzone.urls.custom_404'
