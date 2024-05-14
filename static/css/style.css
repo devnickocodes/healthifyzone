@@ -253,6 +253,7 @@ h2{
     font-weight: 600;
     background-color: rgb(48, 48, 48);
     border-radius: 3px;
+    border: 1px solid rgb(48, 48, 48);
     padding: 4px;
 }
 
@@ -260,6 +261,7 @@ h2{
     text-decoration: none;
     color: rgb(48, 48, 48);
     background-color: rgb(180, 228, 206);
+    border: 1px solid rgb(180, 228, 206);
     font-weight: 600;
 }
 

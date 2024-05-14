@@ -51,7 +51,7 @@
             {% for comment in comments %}
             <div class="d-flex flex-column mb-4 p-3 comment-container {% if not comment.approved and comment.comment_author == user %}text-muted{% elif not comment.approved %}d-none{% endif %}">
                 <div class="d-flex justify-content-between">
-                        <p class="author"><a class="author" href="{% url 'view_profile' comment.comment_author%}">@{{ comment.comment_author }}</a></p>
+                        <p><a class="author" href="{% url 'view_profile' comment.comment_author%}">@{{ comment.comment_author }}</a></p>
                     <div class="ml-auto">
                       {% if comment.approved %}
                         <!-- Comment Likes -->
