@@ -1,9 +1,18 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
 {% block content %}
+<div class="container text-center">
   <h1 class="header">Create Article</h1>
-  <form method="post" enctype="multipart/form-data">
+  <form id="articleForm" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Create</button>
+    {{ form|crispy }}
+    <button type="submit" class="btn main-btn">Create</button>
   </form>
+  <p class="m-2"><span id="errorMessage" class="error-message hidden"></span></p>
+  <small>In case you don't want to upload a picture, a placeholder picture will be assigned for the article</small>
+</div>
+{% endblock %}
+{% block extras %}
+<script src="{% static 'js/check_image_size.js' %}"></script>
 {% endblock %}

@@ -284,7 +284,12 @@ def create_article(request):
             if 'featured_article_image' in request.FILES:
                 article.featured_article_image = request.FILES['featured_article_image']
             article.save()
+            messages.success(request, 'Article has been sent for approval.')
             return redirect('homepage')
+
+        messages.error(request, 'Sorry, the creation of the article was unsuccessful.')
+
     else:
         form = ArticleForm()
+
     return render(request, 'main/create_article.html', {'form': form})
