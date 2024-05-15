@@ -30,8 +30,12 @@
                         <p class="card-text text-center">{{article.subtitle}}</p>
                         <p class="card-text text-center"><a class="author" href="{% url 'view_profile' article.article_author%}">{{article.article_author}}</a> | {{article.created_on |date:"F d, Y" }}</p>
                     </div>
-                    <div class="text-center">
-                        <a href="{% url 'view_article' article.article_slug %}" class="btn main-btn" data-mdb-ripple-init>View Article</a>
+                    <div class="text-center btn-group-vertical" role="group">
+                        <a href="{% url 'view_article' article.article_slug %}" class="btn main-btn m-2">View Article</a>
+                        {% if user.is_authenticated and article.article_author == user %}
+                            <a href="#" class="btn delete-btn m-2">Delete Article</a>
+                            <a href="#" class="btn edit-btn m-2">Edit Article</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
