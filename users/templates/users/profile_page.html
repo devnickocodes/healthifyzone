@@ -9,51 +9,56 @@
 <div class="container">
     <div class="card mx-auto mt-4 profile-card">
         <h1 class="text-center">Profile Info:</h1>
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            <div class="card-body text-center">
-                <div>
-                    {% if "profile_image_placeholder" in user.profile_image.url %}
-                        <img  class="profile-pic w-25" src="{% static 'images/profile_image_placeholder.png' %}" alt="Default Profile Image" >
-                    {% else %}
+        <div class="card-body text-center">
+            <div>
+                {% if "profile_image_placeholder" in user.profile_image.url %}
+                    <img  class="profile-pic w-25" src="{% static 'images/profile_image_placeholder.png' %}" alt="Default Profile Image" >
+                {% else %}
                     <img class="profile-pic w-25" src="{{ user.profile_image.url }}" alt="{{ user.username }}'s Profile Image">
-                    {% endif %}
-                    <h2>{{ user.username }}</h2>
-                    <p><span class="status">{{ user.get_status_display }}</span> level gym goer and healthy lifestyle enthusiast.</p>
-                </div>
-                <p class="mt-2 card-text">
-                    {{ user.bio | striptags | escape }}
-                </p>
-                <p>{{ user.first_name }} {{ user.last_name }}</p>
-                {% if user.username == request.user.username %}
-                
-                <p class="mt-2 card-text">
-                    {{ user.email }}
-                </p>
                 {% endif %}
+                <h2>{{ user.username }}</h2>
+                <p><span class="status">{{ user.get_status_display }}</span> level gym goer and healthy lifestyle enthusiast.</p>
+            </div>
+            <p class="mt-2 card-text">
+                {{ user.bio | striptags | escape }}
+            </p>
+            <p>{{ user.first_name }} {{ user.last_name }}</p>
+            {% if user.username == request.user.username %}
+            
+            <p class="mt-2 card-text">
+                {{ user.email }}
+            </p>
+            {% endif %}
 
-                <!-- Profile Edit -->
-                {% if user.username == request.user.username %}
-                <a href="{% url 'create_article' %}" class="btn main-btn m-3">Create Article</a>
-                <p>
-                    <button class="btn main-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                      Settings
-                    </button>
-                  </p>
-                  <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                        <div class="card mb-2 mx-auto mt-4 profile-update-form">
-                            <h2 class="text-center">Update Profile Info:</h2>
-                            <div class="card-body text-center">
-                                {% crispy form %}
-                                <button class="btn main-btn" type="submit">Update</button>
-                            </div>
+            <!-- Profile Edit -->
+            {% if user.username == request.user.username %}
+            <a href="{% url 'create_article' %}" class="btn main-btn m-3">Create Article</a>
+            <p>
+                <button class="btn main-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Settings
+                </button>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="card mb-2 mx-auto mt-4 profile-update-form">
+                        <h2 class="text-center">Update Profile Info:</h2>
+                        <div class="card-body text-center">
+                            <form id="profileUpdateForm" method="post" enctype="multipart/form-data" class="profile-update-form">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <button type="submit" class="btn main-btn">Update</button>
+                            </form>
+                            <p class="m-2"><span id="errorUpdateProfileMessage"></span></p>
                         </div>
                     </div>
-                  </div>
-                {% endif %}
-            </div>
-        </form>
+                </div>
+              </div>
+            {% endif %}
+        </div>
     </div>
 </div>
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/check_image_size_profile_update.js' %}"></script>
+{% endblock %}
