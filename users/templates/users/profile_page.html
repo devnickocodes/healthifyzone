@@ -34,6 +34,7 @@
 
                 <!-- Profile Edit -->
                 {% if user.username == request.user.username %}
+                <a href="{% url 'create_article' %}" class="btn main-btn m-3">Create Article</a>
                 <p>
                     <button class="btn main-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                       Settings

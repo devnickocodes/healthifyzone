@@ -1,12 +1,13 @@
 # pylint: disable=no-member
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.http import HttpResponseRedirect, JsonResponse
 from django.contrib.auth.decorators import login_required
+from django.utils.text import slugify
 from .models import Article, Category, Comment
-from .forms import CommentForm
+from .forms import ArticleForm, CommentForm
 
 # Create your views here.
 
@@ -263,3 +264,27 @@ def like_article(request):
 
     return JsonResponse({'error': 'Invalid request method or action'},
                         status=400)
+
+
+@login_required
+def create_article(request):
+    """
+    Create an article
+
+    **Template:**
+
+    :template:`main/create_article.html`
+    """
+    if request.method == 'POST':
+        form = ArticleForm(request.POST, request.FILES)
+        if form.is_valid():
+            article = form.save(commit=False)
+            article.article_author = request.user
+            article.article_slug = slugify(article.title)
+            if 'featured_article_image' in request.FILES:
+                article.featured_article_image = request.FILES['featured_article_image']
+            article.save()
+            return redirect('homepage')
+    else:
+        form = ArticleForm()
+    return render(request, 'main/create_article.html', {'form': form})
