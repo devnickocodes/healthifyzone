@@ -46,7 +46,7 @@ class Article(models.Model):
     And :model:`main.Category`
     """
 
-    title = models.CharField(max_length=200, blank=False)
+    title = models.CharField(max_length=200, blank=False, unique=True)
     subtitle = models.CharField(max_length=200, blank=False)
     article_slug = models.SlugField(null=False, blank=False, unique=True)
     content = models.TextField(blank=False)
