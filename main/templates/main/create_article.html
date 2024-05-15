@@ -9,10 +9,10 @@
     {{ form|crispy }}
     <button type="submit" class="btn main-btn">Create</button>
   </form>
-  <p class="m-2"><span id="errorMessage" class="error-message hidden"></span></p>
+  <p class="m-2"><span id="errorCreateArticleMessage"></span></p>
   <small>In case you don't want to upload a picture, a placeholder picture will be assigned for the article</small>
 </div>
 {% endblock %}
 {% block extras %}
-<script src="{% static 'js/check_image_size.js' %}"></script>
+<script src="{% static 'js/check_image_size_create_article.js' %}"></script>
 {% endblock %}
