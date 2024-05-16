@@ -293,3 +293,18 @@ def create_article(request):
         form = ArticleForm()
 
     return render(request, 'main/create_article.html', {'form': form})
+
+@login_required
+def delete_article(request, article_slug):
+    """
+    Delete an article
+
+    **Template:**
+
+    :template:`main/delete_article.html`
+    """
+    article = get_object_or_404(Article, article_slug=article_slug)
+    if request.method == 'POST':
+        article.delete()
+        return HttpResponseRedirect(reverse('homepage'))
+    return render(request, 'main/delete_article.html', {'article': article})
