@@ -43,9 +43,9 @@ def custom_500(request):
     return render(request, '500.html', status=500)
 
 
-handler404 = 'healthifyzone.urls.custom_404'
-handler403 = 'healthifyzone.urls.custom_403'
-handler500 = 'healthifyzone.urls.custom_500'
+HANDLER404 = 'healthifyzone.urls.custom_404'
+HANDLER403 = 'healthifyzone.urls.custom_403'
+HANDLER500 = 'healthifyzone.urls.custom_500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
