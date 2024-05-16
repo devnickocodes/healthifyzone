@@ -308,3 +308,31 @@ def delete_article(request, article_slug):
         article.delete()
         return HttpResponseRedirect(reverse('homepage'))
     return render(request, 'main/delete_article.html', {'article': article})
+
+@login_required
+def edit_article(request, article_slug):
+    """
+    Edit an article
+
+    **Template:**
+
+    :template:`main/edit_article.html`
+    """
+    article = get_object_or_404(Article, article_slug=article_slug)
+    if request.method == 'POST':
+        form = ArticleForm(request.POST, request.FILES, instance=article)
+        if form.is_valid() and article.article_author == request.user:
+            new_article = form.save(commit=False)
+            new_title = form.cleaned_data['title']
+            new_article_slug = slugify(new_title)
+            new_article.article_slug = new_article_slug
+            if 'featured_article_image' in request.FILES:
+                new_article.featured_article_image = request.FILES['featured_article_image']
+            new_article.approved = False
+            new_article.save()
+            messages.success(request, 'Article updated successfully and has been sent for approval!')
+            return HttpResponseRedirect(reverse('homepage'))
+
+        messages.error(request, 'Error updating article. Please check your input.')
+    form = ArticleForm(instance=article)
+    return render(request, 'main/edit_article.html', {'form': form, 'article': article})
