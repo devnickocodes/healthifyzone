@@ -25,7 +25,7 @@
                         <a href="{% url 'view_article' article.article_slug %}" class="btn main-btn mb-2 mt-3">View Article</a>
                         {% if user.is_authenticated and article.article_author == user %}
                             <a href="{% url 'delete_article' article_slug=article.article_slug %}" class="btn delete-btn mb-2">Delete Article</a>
-                            <a href="#" class="btn edit-btn mb-2">Edit Article</a>
+                            <a href="{% url 'edit_article' article_slug=article.article_slug %}" class="btn edit-btn mb-2">Edit Article</a>
                         {% endif %}
                     </div>
                 </div>

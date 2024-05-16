@@ -333,6 +333,6 @@ def edit_article(request, article_slug):
             messages.success(request, 'Article updated successfully and has been sent for approval!')
             return HttpResponseRedirect(reverse('homepage'))
 
-        messages.error(request, 'Error updating article. Please check your input.')
+        messages.error(request, 'Error updating article. Please try again.')
     form = ArticleForm(instance=article)
     return render(request, 'main/edit_article.html', {'form': form, 'article': article})
