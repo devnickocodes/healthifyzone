@@ -282,17 +282,20 @@ def create_article(request):
             article.article_author = request.user
             article.article_slug = slugify(article.title)
             if 'featured_article_image' in request.FILES:
-                article.featured_article_image = request.FILES['featured_article_image']
+                article.featured_article_image = \
+                 request.FILES['featured_article_image']
             article.save()
             messages.success(request, 'Article has been sent for approval.')
             return redirect('homepage')
 
-        messages.error(request, 'Sorry, the creation of the article was unsuccessful.')
+        messages.error(request,
+                       'Sorry, the creation of the article was unsuccessful.')
 
     else:
         form = ArticleForm()
 
     return render(request, 'main/create_article.html', {'form': form})
+
 
 @login_required
 def delete_article(request, article_slug):
@@ -308,6 +311,7 @@ def delete_article(request, article_slug):
         article.delete()
         return HttpResponseRedirect(reverse('homepage'))
     return render(request, 'main/delete_article.html', {'article': article})
+
 
 @login_required
 def edit_article(request, article_slug):
@@ -327,12 +331,17 @@ def edit_article(request, article_slug):
             new_article_slug = slugify(new_title)
             new_article.article_slug = new_article_slug
             if 'featured_article_image' in request.FILES:
-                new_article.featured_article_image = request.FILES['featured_article_image']
+                new_article.featured_article_image = \
+                 request.FILES['featured_article_image']
             new_article.approved = False
             new_article.save()
-            messages.success(request, 'Article updated successfully and has been sent for approval!')
+            messages.success(request,
+                             'Article updated successfully and '
+                             'has been sent for approval!'
+                             )
             return HttpResponseRedirect(reverse('homepage'))
 
         messages.error(request, 'Error updating article. Please try again.')
     form = ArticleForm(instance=article)
-    return render(request, 'main/edit_article.html', {'form': form, 'article': article})
+    return render(request, 'main/edit_article.html', {'form': form,
+                                                      'article': article})

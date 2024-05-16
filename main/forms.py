@@ -8,7 +8,9 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
+
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ['title', 'subtitle', 'content', 'category', 'featured_article_image']
+        fields = ['title', 'subtitle', 'content', 'category',
+                                                  'featured_article_image']
