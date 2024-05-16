@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center">
+    <h1 class="header mb-3">Delete Article</h1>
+    <div class="delete-container">
+        <p>Are you sure you want to delete "{{ article.title }}"?</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="delete-btn">Delete</button>
+      <a href="{% url 'view_article' article.article_slug %}" class="cancel-delete p-1">Cancel</a>
+    </form>
+    </div> 
+</div>
+{% endblock %}
