@@ -250,4 +250,22 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
     - When the user submits a comment, until it is approved only the logged in owner of the comment will be able to see the comment and that it is waiting for approval.
 
-![Comment Awaiting Approval]()
+![Comment Awaiting Approval](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/comment_awaiting_approval.png)
+
+- **Categories Page**
+
+    - When the user lands on the page they can find what categories the articles are grouped in.
+
+![Categories Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/category_page.png)
+
+- **Categories Preview**
+
+    - For each of the categories there is a preview with title, subtitle, date of creation as well as a link to the author's profile page and a "View Category" button.
+
+![Categories Preview](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/category_preview.png)
+
+- **View Category Button**
+
+    - When the user clicks the "View Category" button they will be take to a page consisting of all the articles related to this category.
+
+![View Category Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_category_button.png)
