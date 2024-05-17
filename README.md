@@ -197,3 +197,21 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
     - The "PREV" pagination button will bring back the user to the previous page.
 
 ![Pagination Button (PREV)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pagination_button_prev.png)
+
+- **View Article (complete article page)**
+
+    - When the user clicks the "View Article" button they will be taken to this page where they will be able to read the whole article as well as comment, like other users' comments, visit their profiles, visit the article's owner's profile from the lni and like the article itself.
+
+![View Article (complete article page)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_article_page.png)
+
+- **Article Author Profile Link (Individual Article Page)**
+
+    - The functionality is the same for this link as with the one on the landing page.
+
+![View Article (complete article page)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_author_link.png)
+
+- **Article Like Button (that's not active)**
+
+    - The user can like the article as long as they are logged in, if they are not they will be shown a messaged that will let them know that they have to be logged in.
+
+![View Article (complete article page)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/like_button_not_active.png)
