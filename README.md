@@ -228,8 +228,26 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![Comment Section (not logged in user or user not owner of comment)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/comment_section_not_logged_in_logged_out.png)
 
-- **Comment Section (logged owner of comment)**
+- **Comment Section (logged in owner of comment)**
 
     - For the logged in user that is the author of the comment, they can see two additional options. "Edit" and "Delete", which will allow them to edit/update their comment or delete it respectively.
 
-![Comment Section (logged owner of comment)]()
+![Comment Section (logged in owner of comment)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/delete_comment_confirm.png)
+
+- **Leave Comment Button (not logged in user)**
+
+    - If a non logged in user tries to leave a comment they will be shown a message letting them know that they will need to sign up or log in in order to leave a comment, with links to the necessary pages.
+
+![Leave Comment Button (not logged in user)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/leave_comment_button_not_logged_in_user.png)
+
+- **Leave Comment Button (logged in user)**
+
+    - If a logged in user tries to leave a comment they will be provided with a form that they will need to fill in order for their comment to be send out for approval. The same form will be used when a user wants to edit their comment.
+
+![Leave Comment Button (logged in user)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/leave_comment_button_logged_in_user.png)
+
+- **Comment Awaiting Approval**
+
+    - When the user submits a comment, until it is approved only the logged in owner of the comment will be able to see the comment and that it is waiting for approval.
+
+![Comment Awaiting Approval]()
