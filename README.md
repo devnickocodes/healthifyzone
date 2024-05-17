@@ -143,3 +143,27 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
     - The footer can also be found on each page of the website and it contains information about me as the developer as well as a link to my GitHub page.
 
 ![Footer](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/footer.png)
+
+- **Homepage**
+
+    - The landing page contains previews for each article of the blog.
+
+![Homepage](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/landing_page.png)
+
+- **Article Preview (logged out user)**
+
+    - Each preview consits of a link to the author's profile page, a "View Article" button and pagination buttons for "NEXT" and "PREV".
+
+![Homepage](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_preview.png)
+
+- **Article author profile link**
+
+    - The link to the article's author's profile page will only work for logged in users, if they are not logged in they will be taken to the log in page.
+
+![Article Author Profile Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_author_link.png)
+
+- **"View Article Button"**
+
+    - The "View Article" button will take the user to the full page for that article.
+
+![Article Author Profile Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_article_button.png)
