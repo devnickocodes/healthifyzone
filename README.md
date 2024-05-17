@@ -269,3 +269,58 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
     - When the user clicks the "View Category" button they will be take to a page consisting of all the articles related to this category.
 
 ![View Category Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_category_button.png)
+
+- **View Articles Related to a Category**
+
+    - On this page the user can see all articles related to the category that they have clicked on.
+
+![View Category Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/articles_related_to_a_category.png)
+
+- **Recipe Search Page**
+
+    - On this page the user can search for recipes based on a keyword of their choosing.
+
+![View Category Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/search_recipes_page.png)
+
+- **Recipe Results Page**
+
+    - On this page depending on what the user has searched for, nine recipes will be displayed that the user can choose from.
+
+![Recipe Results Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/search_recipes_results_page.png)
+
+- **View Recipe Button**
+
+    - For each one of the recipes there will be a "View Recipe" button that when clicked the user will be taken to a page that will contain more information about the recipe.
+
+![View Recipe Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_recipe_button.png)
+
+- **View Recipe Button**
+
+    - For each one of the recipes there will be a "View Recipe" button that when clicked the user will be taken to a page that will contain more information about the recipe.
+
+![View Recipe Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_recipe_button.png)
+
+- **Recipe Card Page**
+
+    - Upon clicking on the "View Recipe" button the user will be taken to this page where they will find all the information about the recipe.
+
+![Recipe Card Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_card_page.png)
+
+- **Recipe Prep Time and Servings**
+
+    - The first thing that the user will see is the feature image for the recipe as well as the preparation time and the servings size.
+
+![Recipe Card Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_prep_time_servings_and_image.png)
+
+
+- **Recipe Ingredients**
+
+    - Followed by the ingredients necessary for this recipe.
+
+![Recipe Ingredients](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_ingredients.png)
+
+- **Recipe Instructions**
+
+    - Finally the user will see a dropdown "View Instructions" button that when clicked they will be provided with the instructions and steps for the preparation of the recipe.
+
+![Recipe Instructions](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_instructions.png)
