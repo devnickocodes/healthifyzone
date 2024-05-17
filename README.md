@@ -99,6 +99,18 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![Article by Category wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/articles_by_category.png)
 
+### Create Article Wireframe
+
+![Create Article Wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/create_article_wireframe.png)
+
+### Edit Article Wireframe
+
+![Edit Article Wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/edit_article_wireframe.png)
+
+### Delete Article Wireframe
+
+![Delete Article Wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/delete_article_wireframe.png)
+
 ### Profile Wireframe
 
 ![Profile wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/profile_wireframe.png)
