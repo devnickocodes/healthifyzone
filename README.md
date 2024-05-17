@@ -210,8 +210,14 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![View Article (complete article page)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_author_link.png)
 
-- **Article Like Button (that's not active)**
+- **Article/Comment Like Button (that's not active)**
 
     - The user can like the article as long as they are logged in, if they are not they will be shown a messaged that will let them know that they have to be logged in.
 
-![View Article (complete article page)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/like_button_not_active.png)
+![Article/Comment Like Button (that's not active)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/like_button_not_active.png)
+
+- **Article/Comment Like Button (active)**
+
+    - When the user clicks the like button the heart will turn purple indicating that the user's like for this article or comment is active.
+
+![Article/Comment Like Button (that's not active)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/active_like_button_by_logged_in_user.png)
