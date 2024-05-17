@@ -154,7 +154,14 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
     - Each preview consits of the article's title, subtitle, date of creation and link to the author's profile page as well as "View Article" button.
 
-![Homepage](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_preview.png)
+![Article Preview (logged out user)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_preview.png)
+
+- **Article Preview (logged in user that is owner of the article)**
+
+    - Along with the rest of the features the logged in owner of the article can see two additional options. A "Delete Article" button and an "Edit Article" button.
+
+![Article Preview (logged in user that is owner of the article)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_preview_logged_in_owner_of_article.png)
+
 
 - **Article Author Profile Link**
 
