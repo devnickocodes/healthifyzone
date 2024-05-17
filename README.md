@@ -152,18 +152,30 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 - **Article Preview (logged out user)**
 
-    - Each preview consits of a link to the author's profile page, a "View Article" button.
+    - Each preview consits of the article's title, subtitle, date of creation and link to the author's profile page as well as "View Article" button.
 
 ![Homepage](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_preview.png)
 
-- **Article author profile link**
+- **Article Author Profile Link**
 
     - The link to the article's author's profile page will only work for logged in users, if they are not logged in they will be taken to the log in page.
 
 ![Article Author Profile Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_author_link.png)
 
-- **"View Article Button"**
+- **View Article Button**
 
     - The "View Article" button will take the user to the full page for that article.
 
-![Article Author Profile Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_article_button.png)
+![View Article Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_article_button.png)
+
+- **Pagination Button (NEXT)**
+
+    - The "NEXT" pagination button will take the user to the next page.
+
+![Pagination Button (NEXT)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pagination_button_next.png)
+
+- **Pagination Button (PREV)**
+
+    - The "PREV" pagination button will bring back the user to the previous page.
+
+![Pagination Button (PREV)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pagination_button_prev.png)
