@@ -146,13 +146,13 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 - **Homepage**
 
-    - The landing page contains previews for each article of the blog.
+    - The landing page contains previews for each article of the blog and pagination buttons for "NEXT" and "PREV".
 
 ![Homepage](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/landing_page.png)
 
 - **Article Preview (logged out user)**
 
-    - Each preview consits of a link to the author's profile page, a "View Article" button and pagination buttons for "NEXT" and "PREV".
+    - Each preview consits of a link to the author's profile page, a "View Article" button.
 
 ![Homepage](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_preview.png)
 
