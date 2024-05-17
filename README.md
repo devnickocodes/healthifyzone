@@ -324,3 +324,31 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
     - Finally the user will see a dropdown "View Instructions" button that when clicked they will be provided with the instructions and steps for the preparation of the recipe.
 
 ![Recipe Instructions](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_instructions.png)
+
+- **Profile Page (own profile page)**
+
+    - When the user navigates to their own profile page, they will see their profile picture (it will be a placeholder image if they haven't changed it), username, status, bio, first and last names if they have provided these details upon signing up, their email as well as a "Create Article" and "Settings" buttons.
+
+![Profile Page (own profile page)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/logged_in_user_own_profile_page.png)
+
+- **Create Article Button**
+
+    - When the user clicks the "Create Article" button they will be taken to a page where they can create an article so it is sent for approval.
+
+![Create Article Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/create_article_button.png)
+
+- **Settings Button**
+
+    - When the user clicks the "Settings" dropdown button a profile update form will be shown so they can edit their profile information.
+
+![Settings Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/profile_settings_button.png)
+
+- **Profile Update Form**
+
+![Profile Update Form](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/profile_update_form.png)
+
+- **Profile Page (another user's profile page)**
+
+    - This is the page where the user will be taken if they have clicked on the author's profile link from the article, categories or the comments. The page displays the other user's profile picture, username, status, first and last name if it was provided upond signing up.
+
+![Profile Page (another user's profile page)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/logged_in_user_not_own_profile_page.png)
