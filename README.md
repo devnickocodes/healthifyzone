@@ -168,11 +168,24 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![Delete Article Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_delete_button.png)
 
+- **Delete Article Page**
+
+    - When the owner of the article clicks on the "Delete Article" button the user will be taken to a page where they would need to confirm the deletion of the article.
+
+![Delete Article Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/delete_article_page.png)
+
+
 - **Edit Article Button**
 
     - The "Edit Article" button will take the user to a page where they will be able to edit/update their article.
 
 ![Edit Article Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/article_edit_button.png)
+
+- **Edit Article Page**
+
+    - When the owner of the article clicks on the "Edit Article" button the user will be taken to a page with a form for updating the article with prefilled input fields.
+
+![Edit Article Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/edit_article_page.png)
 
 - **Article Author Profile Link**
 
