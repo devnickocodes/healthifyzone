@@ -132,3 +132,14 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ### Existing Features
 
+- **Navbar**
+
+    - The navbar can be seen on every page of the website it includes links to the main pages of the site.
+
+![Navbar](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/navbar.png)
+
+- **Footer**
+
+    - The footer can also be found on each page of the website and it contains information about me as the developer as well as a link to my GitHub page.
+
+![Footer](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/footer.png)
