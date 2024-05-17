@@ -71,7 +71,7 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![Homepage wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/homepage_wireframe.png)
 
-### Category Wireframe
+### Categories Wireframe
 
 ![Category wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/categories_wireframe.png)
 
@@ -127,3 +127,8 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 ### Log Out Wireframe
 
 ![Log Out wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/logout_wireframe.png)
+
+## **Wireframes**
+
+### Existing Features
+
