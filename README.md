@@ -221,3 +221,15 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
     - When the user clicks the like button the heart will turn purple indicating that the user's like for this article or comment is active.
 
 ![Article/Comment Like Button (that's not active)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/active_like_button_by_logged_in_user.png)
+
+- **Comment Section (not logged in user or user not owner of comment)**
+
+    - The comment section shows the username of the comment's author, date of creation and the comment itself.
+
+![Comment Section (not logged in user or user not owner of comment)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/comment_section_not_logged_in_logged_out.png)
+
+- **Comment Section (logged owner of comment)**
+
+    - For the logged in user that is the author of the comment, they can see two additional options. "Edit" and "Delete", which will allow them to edit/update their comment or delete it respectively.
+
+![Comment Section (logged owner of comment)]()
