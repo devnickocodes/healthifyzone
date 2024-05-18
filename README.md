@@ -448,3 +448,12 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 - Used to validate the JavaScript code of the website.
 - [CI Python Linter](https://pep8ci.herokuapp.com/) 
 - Used to validate the Python code for the website
+
+## **Database Design**
+
+ - I created the entity relationship diagram using [draw.io](https://app.diagrams.net/). 
+
+### Entity Relationship Diagram
+
+![ERD](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/erd_database_models.png)
+
