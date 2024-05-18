@@ -401,3 +401,50 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
     - If the user has entered this page on accident and they don't have an account they can click on the sign up link and create an account.
 
 ![Log In Page Sign Up Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/log_in_page_sign_up_link.png)
+
+## **Technologies Used**
+
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML)
+- The structure of the website was created with HTML5.
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- The styling of the website was created with CSS3.
+- [Bootstrap](https://getbootstrap.com/)
+- Used as fron-end CSS framework for pre-built components.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- Used for AJAX functions for the likes of articles and comments, checking of user uploaded image sizes and notifying the user if they have uploaded an image that is too large, messages timeout as well as the update and delete of comments.
+- [Python](https://www.python.org) 
+- Used as the back-end programming language.
+- [Font Awesome](https://fontawesome.com/)
+- The icons of the website were imported from Font Awesome.
+- [Google Fonts](https://fonts.google.com/)
+- The Inter font was imported from Google Fonts.
+- [Github](https://github.com/)
+- For storage of the website's code as well as deployment, Github was used.
+- [Git](https://git-scm.com/)
+- Git commands were used in the IDE for version control.
+- [Balsamiq](https://balsamiq.com/)
+- The wireframe designs for the website were created with Balsamiq.
+- [Django](https://www.djangoproject.com) 
+- Used as the Python framework for the site.
+- [PostgreSQL](https://www.postgresql.org) 
+- Used as the relational database management.
+- [ElephantSQL](https://www.elephantsql.com) 
+- Used as the Postgres database management.
+- [Heroku](https://www.heroku.com) 
+- Used for hosting the deployed website.
+- [Cloudinary](https://cloudinary.com) 
+- Used for online image file storage.
+- [Spoonacular](https://spoonacular.com/food-api) 
+- An API used for fetching recipes.
+- [Gmail](https://www.google.com/gmail/about/) 
+- Used for sending out password reset links.
+- [CodeAnywhere](https://codeanywhere.com/signin)
+- Used as an IDE to write the code for this project.
+- [W3C HTML Validator](https://validator.w3.org/) 
+- Used to validate the HTML code of the website.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
+- Used to validate the CSS code of the website.
+-[JSHint Validator](https://jshint.com/) 
+- Used to validate the JavaScript code of the website.
+- [CI Python Linter](https://pep8ci.herokuapp.com/) 
+- Used to validate the Python code for the website
