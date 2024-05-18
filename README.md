@@ -457,3 +457,20 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![ERD](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/erd_database_models.png)
 
+## **Agile Development**
+
+I used [GitHub Projects](https://github.com/users/devnickocodes/projects/6/views/1) as one of the Agile tools for this project. The development progress was tracked using the Kanban board.
+
+![Project Board](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/project_board.png)
+
+Another Agile tool that was used is GitHub Issues. There I used a User Story Template to create all of my user stories.
+
+- **Closed Issues**
+
+![Closed Issues 1](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/closed_issues_1.png)
+
+![Closed Issues 2](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/closed_issues_2.png)
+
+- **Open Issues**
+
+![Open Issues](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/open_issues.png)
