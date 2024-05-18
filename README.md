@@ -378,3 +378,26 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![Already Have an Account Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/already_have_an_account_link.png)
 
+- **Log In Page**
+
+    - On this page the user can log in into their account by providing a username and a password 
+
+![Log In Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/log_in_page.png)
+
+- **Remember Me Checkbox**
+
+    - If the user would like to remain signed in they can check the "Remember Me" Checkbox.
+
+![Remember Me Checkbox](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/remember_me_checkbox.png)
+
+- **Password Reset Link**
+
+    - If the user has forgotten their password they can easily click on the forgot my password link, after which they would have to provide the email with which they have signed up and if it matches they will receive a password reset link.
+
+![Password Reset Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/forgotten_password_link.png)
+
+- **Log In Page Sign Up Link**
+
+    - If the user has entered this page on accident and they don't have an account they can click on the sign up link and create an account.
+
+![Log In Page Sign Up Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/log_in_page_sign_up_link.png)
