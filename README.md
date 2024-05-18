@@ -444,7 +444,7 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 - Used to validate the HTML code of the website.
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) 
 - Used to validate the CSS code of the website.
--[JSHint Validator](https://jshint.com/) 
+- [JSHint Validator](https://jshint.com/) 
 - Used to validate the JavaScript code of the website.
 - [CI Python Linter](https://pep8ci.herokuapp.com/) 
 - Used to validate the Python code for the website
