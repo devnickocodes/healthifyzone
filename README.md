@@ -365,3 +365,16 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
     - This is the page where the user will be taken if they have clicked on the author's profile link from the article, categories or the comments. The page displays the other user's profile picture, username, status, first and last name if it was provided upond signing up.
 
 ![Profile Page (another user's profile page)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/logged_in_user_not_own_profile_page.png)
+
+- **Sign Up Page**
+
+    - Here the user can create their account by typing in their first name, last name, username, email, and two times the password for confirmation. Their fitness proficiency status will be assigned as 'Beginner' innitially, which they can easily change from the profile page. 
+
+![Sign Up Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/sign_up_page.png)
+
+- **Already Have an Account Link**
+
+    - If the user has entered this page on accident and they have an account they can click on sign in next to Already have an account? and log in easily.
+
+![Already Have an Account Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/already_have_an_account_link.png)
+
