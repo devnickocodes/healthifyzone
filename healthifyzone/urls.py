@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-from django.conf.urls import handler403, handler404, handler500  #noqa
+from django.conf.urls import handler403, handler404, handler500
 from django.shortcuts import render
 from users import views as user_views
 

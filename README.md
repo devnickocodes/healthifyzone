@@ -474,3 +474,36 @@ Another Agile tool that was used is GitHub Issues. There I used a User Story Tem
 - **Open Issues**
 
 ![Open Issues](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/open_issues.png)
+
+## **Testing**
+
+You can find the testing and validation [here](TESTING.md).
+
+## **Deployment**
+
+### ElephantSQL Database
+
+- To obtain your ElephantSQL database, create an accound and follow the steps below.
+
+    - Click on "Create New Instance".
+    - Pick a name of your choosing.
+    - Choose the "Free" plan.
+    - You can skip the tags part.
+    - Select the "Region" that is closest to you.
+    - Click on the name of the database where you can find your database URL.
+
+### Cloudinary API
+
+- To obtain your Cloudinary API key, API secret and name, create an accound and follow the steps below.
+
+    - Navigate to the "Programmable Media" tab.
+    - Navigate to the "Dashboard".
+    - This is where you can find the necessary API key, secret and name.
+
+### Spoonacular API
+
+- To obtain your Spoonacular API key, create an accound and follow the steps below.
+
+    - Click on "My Console".
+    - Navigate to "Profile".
+    - Copy your Spoonacular API.
