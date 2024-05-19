@@ -549,3 +549,40 @@ You can find the testing and validation [here](TESTING.md).
         - `echo web: node index.js > Procfile`  
     
     - Your project should now be deployed on Heroku.
+
+### Local Deployment
+
+- In order to run the project locally, you will need to install all the dependancies and packages from the requirements.txt file.
+
+    - `pip3 freeze > requirements.txt` 
+
+- You will also need to create an env.py at the root-level of the project and set up the environment v
+
+- You can find a sample env.py file bellow:
+
+import os
+
+os.environ.setdefault("CLOUDINARY_API_KEY", "insert your Claudinary API key here")
+
+os.environ.setdefault("CLOUDINARY_API_SECRET", "insert your Claudinary API secret here")
+
+os.environ.setdefault("CLOUDINARY_CLOUD_NAME", "insert your Claudinary name here")
+
+os.environ.setdefault("DATABASE_URL", "inster your ElephantSQL database URL here")
+
+os.environ.setdefault("EMAIL_HOST_PASSWORD", "insert your email host password which is for password reset emails")
+
+os.environ.setdefault("GMAIL_EMAIL_ADDRESS", "insert your gmail email address which is for password reset emails")
+
+os.environ.setdefault("SECRET_KEY", "insert your secret key, which can by any random secret key")
+
+os.environ.setdefault("SPOONACULAR_API_KEY", "insert your Spoonacular API key here")
+
+- Once the project is Cloned or Forked, follow the steps below 
+
+    - Start your Django app by typing  `python3 manage.py runserver` in the terminal.
+    - Stop the already running project by doing "CTRL+C".
+    - Make migrations by typing `python3 manage.py makemigrations` in the terminal.
+    - Migrate to the database: `python3 manage.py migrate` in the terminal.
+    - Create a superuser which will be the admin of the project by typing `python3 manage.py createsuperuser` in the terminal.
+    - Start your Django app again by typing `python3 manage.py runserver` in the terminal.
