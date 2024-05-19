@@ -507,3 +507,45 @@ You can find the testing and validation [here](TESTING.md).
     - Click on "My Console".
     - Navigate to "Profile".
     - Copy your Spoonacular API.
+
+### Deployment on Heroku
+
+- Heroku is used for the deployment of the project, here are the steps after you create your account:
+
+    - Click on 'New' at the top-right corner of your Dashboard, then select 'Create new app'
+    - Choose a distinct app name (as no two projects can have the same name on Heroku) and choose your region
+    - Click on 'Create App'
+    - Navigate to 'Settings'
+    - Click on 'Reveal Config Vars' to set up your environment variables.
+
+        - The key/ value pairs are as follows.
+
+            - CLOUDINARY_API_KEY - insert your Claudinary API key here.
+            - CLOUDINARY_API_SECRET - insert your Claudinary API secret here.
+            - CLOUDINARY_CLOUD_NAME - insert your Claudinary name here.
+            - DATABASE_URL - inster your ElephantSQL database URL here.
+            - EMAIL_HOST_PASSWORD - insert your email host password (for password reset emails)
+            - GMAIL_EMAIL_ADDRESS - insert your gmail email address (for password reset emails)
+            - SECRET_KEY - insert your secret key, which can by any random secret key
+            - SPOONACULAR_API_KEY - insert your Spoonacular API key here.
+    
+    - Navigate to the 'Deploy' tab, which is on the left side of the 'Settings' tab, in the deployment method section click on GitHub
+    - To connect your GitHub code to Heroku, type in the name of your repository and then click on 'Search'. Once you see your repository show up click on 'Connect'
+    - Choose a branch from which you wish to deploy.
+    - You can choose to deploy your app manualy in the 'Manual Deploy' section click on 'Deploy Branch'
+    - If you prefer you can also choose automatic deploys, in that case navigate to the 'Automatic Deploys' section and click on 'Enable Automatic Deploys', this method keeps the project up to date with your repository.
+
+    - Heroku requires two additional files for deployments
+        
+        - requirements.txt 
+        - Profile
+
+    - To install the list of dependancies used for this project which will go in your requirements.txt file you can use the following command:
+
+        - `pip3 freeze > requirements.txt` 
+
+    - To create the Procfile you can use the following command:
+
+        - `echo web: node index.js > Procfile`  
+    
+    - Your project should now be deployed on Heroku.
