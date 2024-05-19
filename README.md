@@ -586,3 +586,19 @@ os.environ.setdefault("SPOONACULAR_API_KEY", "insert your Spoonacular API key he
     - Migrate to the database: `python3 manage.py migrate` in the terminal.
     - Create a superuser which will be the admin of the project by typing `python3 manage.py createsuperuser` in the terminal.
     - Start your Django app again by typing `python3 manage.py runserver` in the terminal.
+
+#### How to Fork
+
+- You can fork the repository, follow the steps below.
+
+    - Sign Up or Log In if you have an account to Github.
+    - Go to the repository for the HealthifyZone project - [devnickocodes/HealthifyZone Project](https://github.com/devnickocodes/healthifyzone/)
+    - Click on the Fork button that is on the right side of the repository name.
+
+#### How to Clone
+
+- You can make a local copy of The Elements Game project by writing the following command in your IDE terminal.
+
+    - `git clone https://github.com/devnickocodes/healthifyzone.git` 
+
+## **Credits**
