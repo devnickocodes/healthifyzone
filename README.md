@@ -402,6 +402,16 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![Log In Page Sign Up Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/log_in_page_sign_up_link.png)
 
+## **Future Features**
+
+- The following are things that I would like to add in the future:
+
+    - Sign Up with email verification.
+    - Add an 'About Me' page.
+    - Add the option for the user to log in with an email.
+    - Add a follow/unfollow functionality.
+    - Add personal messages between users.
+
 ## **Technologies Used**
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML)
@@ -622,3 +632,4 @@ os.environ.setdefault("SPOONACULAR_API_KEY", "insert your Spoonacular API key he
 - The favicon is from [this](https://www.flaticon.com/free-icon/leaf_257611?term=leaf&page=1&position=21&origin=search&related_id=257611) website.
 - The [Spoonacular](https://spoonacular.com/food-api/docs) documentation helped me with all the veiws reagrding the recipe section.
 - The logic for the user uploaded image sizes errors is from [this](https://www.youtube.com/watch?v=Af4Kc3NQ8z4&ab_channel=OpenJavaScript) video.
+- The README and TESTING files' markdown is inspired by [adamgilroy22](https://github.com/adamgilroy22)
