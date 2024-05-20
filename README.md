@@ -14,22 +14,24 @@ HealthifyZone is a blog where people who would like to improve their lifestyle c
   - [User Stories](#user-stories)
     - [Users](#users)
     - [Site Admin](#site-admin)
-
   - [Wireframes](#wireframes)
-    - [Add Task](#add-task)
-    - [View Tasks](#view-tasks)
-    - [Remove Task](#remove-task)
-    - [Mark Task As Done](#mark-task-as-done)
-    - [Mark Task As Not Done](#mark-task-as-not-done)
-    - [Quit](#quit)
-  - [Google Sheets](#google-sheets)
-  - [Features Left To Implement](#features-left-to-implement)
-    - [Authentication](#authentication)
-    - [Download Tasks List](#download-tasks-list)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
   - [Technologies Used](#technologies-used)
-  - [Imported Libraries](#imported-libraries)
-  - [Testing and VAlidation](#testing-and-validation)
-  - [Bugs](#bugs)
+  - [Database Design](#database-design)
+    - [Entity Relationship Diagram](#entity-relationship-diagram)
+  - [Agile Development](#agile-development)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+    - [ElephantSQL Database](#elephantsql-database)
+    - [Cloudinary API](#cloudinary-api)
+    - [Spoonacular API](#spoonacular-api)
+    - [Deployment on Heroku](#deployment-on-heroku)
+    - [Local Deployment](#local-deployment)
+      - [How to Fork](#how-to-fork)
+      - [How to Clone](#how-to-clone)
+   - [Credits](#credits)
+   - [Acknowledgements](#acknowledgements)
 
 ## **UX**
 
@@ -154,8 +156,6 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 - **Log Out Wireframe**
 
 ![Log Out wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/logout_wireframe.png)
-
-## **Wireframes**
 
 ### Existing Features
 
