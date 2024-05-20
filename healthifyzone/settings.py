@@ -23,7 +23,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.codeanyapp.com',
-    '.herokuapp.com',
+    'https://healthifyzone-8c9a32d8f968.herokuapp.com',
 ]
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
