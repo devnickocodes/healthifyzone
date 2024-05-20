@@ -237,6 +237,8 @@ def like_comment(request):
     return JsonResponse({'error': 'Invalid request method or action'},
                         status=400)
 
+# Code for likes inspire by Very Academy on YouTube
+
 
 @login_required
 def like_article(request):

@@ -602,3 +602,23 @@ os.environ.setdefault("SPOONACULAR_API_KEY", "insert your Spoonacular API key he
     - `git clone https://github.com/devnickocodes/healthifyzone.git` 
 
 ## **Credits**
+
+- Some of the code is inspired by [Code Institute's](https://codeinstitute.net/) I Think Therefore I Blog walkthrough project with some adjustments made.
+- I learned how to impement ajax functionality and liking of comments with [this](https://www.youtube.com/watch?v=Lsxc5ok4qdU&t=1240s) video.
+- I learned how to create a custom register view and user registration form with some adjustments made for the form, with [this](https://www.youtube.com/watch?v=lHYzmlx2Vso&list=PLbMO9c_jUD44i7AkA4gj1VSKvCFIf59fb&index=7&ab_channel=PythonLessons) video.
+- I learned how to build the profile view function [here](https://www.youtube.com/watch?v=q5oO9XB6Vrs&list=PLbMO9c_jUD44i7AkA4gj1VSKvCFIf59fb&index=12&ab_channel=PythonLessons)
+- I learned how I could use model_to_dict to convert the user model instance saved by the form into a dictionary [here](https://stackoverflow.com/questions/21925671/convert-django-model-object-to-dict-with-all-of-the-fields-intact)
+- The user profile card is inspired by [this](https://bbbootstrap.com/snippets/user-profile-font-awesome-icons-43178317) Bootstrap 4 User profile with font awesome icons.
+- The placeholder for the profile photo is from [pixabay](https://pixabay.com/vectors/avatar-icon-placeholder-facebook-1577909/)
+- The article and category photos are from [pexels](https://www.pexels.com/).
+- To tackle the 'Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely' I looked into the timeout parameter and its implementation [here](https://requests.readthedocs.io/en/latest/user/quickstart/#timeouts).
+- [This](https://www.youtube.com/watch?v=yVdvR7fZ0A0&ab_channel=AlinaChudnova) video helped me get started on the code for the recipes.
+- I used [jQuery's](https://api.jquery.com/) API documentantion.
+- I used [this](https://imageresizer.com/) image resizer and [TinyPNG](https://tinypng.com/).
+- The content for the blog was gathered from the following links:
+    - [helpguide](https://www.helpguide.org/articles/depression/depression-symptoms-and-warning-signs.htm)
+    - [helpguide](https://www.helpguide.org/articles/healthy-living/the-mental-health-benefits-of-exercise.htm)
+    - [health.harvard](https://www.health.harvard.edu/staying-healthy/yoga-benefits-beyond-the-mat)
+- The favicon is from [this](https://www.flaticon.com/free-icon/leaf_257611?term=leaf&page=1&position=21&origin=search&related_id=257611) website.
+- The [Spoonacular](https://spoonacular.com/food-api/docs) documentation helped me with all the veiws reagrding the recipe section.
+- The logic for the user uploaded image sizes errors is from [this](https://www.youtube.com/watch?v=Af4Kc3NQ8z4&ab_channel=OpenJavaScript) video.

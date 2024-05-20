@@ -39,6 +39,8 @@ def register(request):
         context={"form": form}
     )
 
+#  The profile view is inspired by Python Lessons on Youtube
+
 
 @login_required
 def view_profile(request, username):
