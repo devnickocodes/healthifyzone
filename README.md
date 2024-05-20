@@ -4,6 +4,33 @@ HealthifyZone is a blog where people who would like to improve their lifestyle c
 
 [Live link to website](https://healthifyzone-8c9a32d8f968.herokuapp.com/)
 
+## **Contents**
+
+- [HealthifyZone](#healthifyzone---portfolio-project-4)
+  - [Contents](#contents)
+  - [UX](#ux)
+    - [Color Scheme](#colour-scheme)
+    - [Typography](#typography)
+  - [User Stories](#user-stories)
+    - [Users](#users)
+    - [Site Admin](#site-admin)
+
+  - [Wireframes](#wireframes)
+    - [Add Task](#add-task)
+    - [View Tasks](#view-tasks)
+    - [Remove Task](#remove-task)
+    - [Mark Task As Done](#mark-task-as-done)
+    - [Mark Task As Not Done](#mark-task-as-not-done)
+    - [Quit](#quit)
+  - [Google Sheets](#google-sheets)
+  - [Features Left To Implement](#features-left-to-implement)
+    - [Authentication](#authentication)
+    - [Download Tasks List](#download-tasks-list)
+  - [Technologies Used](#technologies-used)
+  - [Imported Libraries](#imported-libraries)
+  - [Testing and VAlidation](#testing-and-validation)
+  - [Bugs](#bugs)
+
 ## **UX**
 
 For the colors, I decided to keep it thematic and mainly stick with different shades of green, as green has been linked with growth, vitality, and overall well-being, as well as being soothing to the eyes, which in turn will help with the UX.
@@ -67,64 +94,64 @@ I imported the font for the website from [Google Fonts](https://fonts.google.com
 
 The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
-### Home Page Wireframe
+- **Home Page Wireframe**
 
 ![Homepage wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/homepage_wireframe.png)
 
-### Categories Wireframe
+- **Categories Wireframe**
 
 ![Category wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/categories_wireframe.png)
 
-### Recipe Search Wireframe
+- **Recipe Search Wireframe**
 
 ![Recipe Search wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_search_wireframe.png)
 
-### Recipe Results Wireframe
+- **Recipe Results Wireframe**
 
 ![Recipe Results wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_results_wireframe.png)
 
-### View Recipe Details Wireframe
+- **View Recipe Details Wireframe**
 
 ![View Recipe Details wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_recipe_wireframe.png)
 
-### View Recipe Details Wireframe
+- **View Recipe Details Wireframe**
 
 ![View Recipe Details wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_recipe_wireframe.png)
 
-### View Article Wireframe
+- **View Article Wireframe**
 
 ![View Article wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_article_wireframe.png)
 
-### View Article by Category Wireframe
+- **View Article by Category Wireframe**
 
 ![Article by Category wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/articles_by_category.png)
 
-### Create Article Wireframe
+- **Create Article Wireframe**
 
 ![Create Article Wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/create_article_wireframe.png)
 
-### Edit Article Wireframe
+- **Edit Article Wireframe**
 
 ![Edit Article Wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/edit_article_wireframe.png)
 
-### Delete Article Wireframe
+- **Delete Article Wireframe**
 
 ![Delete Article Wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/delete_article_wireframe.png)
 
-### Profile Wireframe
+- **Profile Wireframe**
 
 ![Profile wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/profile_wireframe.png)
 
-### Sign Up Wireframe
+- **Sign Up Wireframe**
 
 ![Sign Up wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/sign_up_wireframe.png)
 
-### Log In Wireframe
+- **Log In Wireframe**
 
 ![Log In wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/login_wireframe.png)
 
 
-### Log Out Wireframe
+- **Log Out Wireframe**
 
 ![Log Out wireframe](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/logout_wireframe.png)
 
