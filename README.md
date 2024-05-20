@@ -633,3 +633,11 @@ os.environ.setdefault("SPOONACULAR_API_KEY", "insert your Spoonacular API key he
 - The [Spoonacular](https://spoonacular.com/food-api/docs) documentation helped me with all the veiws reagrding the recipe section.
 - The logic for the user uploaded image sizes errors is from [this](https://www.youtube.com/watch?v=Af4Kc3NQ8z4&ab_channel=OpenJavaScript) video.
 - The README and TESTING files' markdown is inspired by [adamgilroy22](https://github.com/adamgilroy22)
+
+## **Acknowledgements**
+
+- I would like to acknowledge and thank the following people.
+
+    - Jubril Akolade - My Code Institute Mentor.
+    - The Code Institute Tutor Support - For their awesome and quick technical help.
+    - Thank you to everyone who took the time to use the app and give feedback.
