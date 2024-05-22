@@ -9,9 +9,9 @@ Since some of the pages require the user to be logged in, this way of validation
 
 For these pages I have extracted the code by right-clicking on the pages that need validation and selecting "View Page Source" and pasting the code directly in the validator.
 
-| Page | Screenshot | Notes |
+| Page | Screenshot | PASS/FAIL |
 | --- | --- | --- |
-| Homepage (first validation) | ![Homepage (first validation)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/first-validation-homepage.png) | The first validation returned a couple of errors about the button elements being descendants of the anchor tags elements |
+| Homepage (first validation) | ![Homepage (first validation)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/first-validation-homepage.png) | FAIL: The first validation returned a couple of errors about the button elements being descendants of the anchor tags elements |
 | Homepage (second validation) | ![Homepage (second validation)](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/second-validation-homepage.png) | PASS |
 | Category Page | ![Category Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/category-page-validation.png) | PASS |
 | View Article Page | ![View Article Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_article_page_validation.png) | PASS |
@@ -32,7 +32,10 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 | Edit Article Page | ![Edit Article Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/edit_article_page_validation.png) | PASS |
 | Delete Article Page | ![Delete Article Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/delete_article_page_validation.png) | PASS |
 
+## **CSS Validation**
 
 
 
-
+## **JavaScript Validation**
+| JS File | Screenshot | PASS/FAIL |
+| --- | --- | --- |
