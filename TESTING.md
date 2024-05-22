@@ -76,4 +76,6 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 | Microsoft Edge | ![Microsoft Edge](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/microsoft_edge.jpeg) | PASS |
 
 
-
+## **Responsiveness**
+| Device | Screenshot | PASS/FAIL |
+| --- | --- | --- |
