@@ -87,3 +87,27 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 
 ## **Lighthouse Validation**
 
+| Page | Screenshot | PASS/FAIL |
+| --- | --- | --- |
+| Homepage | ![Homepage](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/homepage_lighthouse.png) | PASS: Some minor warnings |
+| Category Page | ![Category Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/category_lighthouse.png) | PASS |
+| Sign Up Page | ![Sign Up Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/sign_up_lighthouse.png) | PASS |
+| Log In Page | ![Log In Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/login_lighthouse.png) | PASS |
+| Log Out Page | ![Log Out Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/logout_lighthouse.png) | PASS |
+| Recipe Search Page | ![Recipe Search Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_search_lighthouse.png) | PASS |
+| Recipe Results Page | ![Recipe Results Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_results_lighthouse.png) | PASS |
+| Recipe Details Page | ![Recipe Details Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/recipe_details_lighthouse.png) | PASS |
+| Profile Page | ![Profile Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/profile_lighthouse.png) | PASS |
+| Create Article Page | ![Create Article Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/create_article_lighthouse.png) | PASS |
+| Edit Article Page | ![Edit Article Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/edit_article_lighthouse.png) | PASS |
+| Delete Article Page | ![Delete Article Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/delete_article_lighthouse.png) | PASS |
+| Password Reset Page | ![Password Reset Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/password_reset_lighthouse.png) | PASS |
+| Password Reset Email Sent Page | ![Password Reset Email Sent Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/password_reset_email_sent_lighthouse.png) | PASS |
+| Password Reset Email Opened Page | ![Password Reset Email Opened Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/password_reset_email_opened_lighthouse.png) | PASS |
+| Password Reset Done Page | ![Password Reset Done Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/password_reset_done_lighthouse.png) | PASS |
+
+
+
+
+
+
