@@ -57,5 +57,9 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 | main app / models.py   | ![main app / models.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-models.py.png) | PASS |
 | main app / urls.py   | ![main app / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-urls.py.png) | PASS |
 | main app / views.py   | ![main app / views.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-views.py.png) | PASS |
+| recipe app / urls.py   | ![recipe app / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-recipe-urls.py.png) | PASS |
+| recipe app / views.py   | ![recipe app / views.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-recipe-views.py.png) | PASS |
+| healthifyzone / urls.py   | ![healthifyzone / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-project-urls.py.png) | PASS |
+| healthifyzone / settings.py   | ![healthifyzone / settings.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-project-settings.py.png) | PASS |
 
 
