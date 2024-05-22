@@ -77,10 +77,13 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 
 
 ## **Responsiveness**
+
 | Device | Screenshot | PASS/FAIL |
 | --- | --- | --- |
 | Desktop | ![Desktop](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/desktop_responsiveness.png) | PASS |
 | Laptop | ![Laptop](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/laptop_responsiveness.png) | PASS |
 | Tablet (Google DevTools) | ![Tablet](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/tablet_responsiveness.png) | PASS |
 | Mobile (Google DevTools) | ![Mobile](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/mobile_responsiveness.png) | PASS |
+
+## **Lighthouse Validation**
 
