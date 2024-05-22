@@ -52,22 +52,28 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 
 | Python App/File | Screenshot | PASS/FAIL |
 | --- | --- | --- |
-| main app / admin.py   | ![main app / admin.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-admin.py.png) | PASS |
-| main app / forms.py   | ![main app / forms.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-forms.py.png) | PASS |
-| main app / models.py   | ![main app / models.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-models.py.png) | PASS |
-| main app / urls.py   | ![main app / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-urls.py.png) | PASS |
-| main app / views.py   | ![main app / views.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-views.py.png) | PASS |
-| recipe app / urls.py   | ![recipe app / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-recipe-urls.py.png) | PASS |
-| recipe app / views.py   | ![recipe app / views.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-recipe-views.py.png) | PASS |
-| healthifyzone / urls.py   | ![healthifyzone / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-project-urls.py.png) | PASS |
-| healthifyzone / settings.py   | ![healthifyzone / settings.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-project-settings.py.png) | PASS |
-| users app / admin.py   | ![users app / admin.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-admin.py.png) | PASS |
-| users app / forms.py   | ![users app / forms.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-forms.py.png) | PASS |
-| users app / models.py   | ![users app / models.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-models.py.png) | PASS |
-| users app / urls.py   | ![users app / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-urls.py.png) | PASS |
-| users app / views.py   | ![users app / views.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-views.py.png) | PASS |
+| main app / admin.py | ![main app / admin.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-admin.py.png) | PASS |
+| main app / forms.py | ![main app / forms.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-forms.py.png) | PASS |
+| main app / models.py | ![main app / models.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-models.py.png) | PASS |
+| main app / urls.py | ![main app / urls.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-urls.py.png) | PASS |
+| main app / views.py | ![main app / views.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-main-views.py.png) | PASS |
+| recipe app / urls.py | ![recipe app / urls.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-recipe-urls.py.png) | PASS |
+| recipe app / views.py | ![recipe app / views.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-recipe-views.py.png) | PASS |
+| healthifyzone / urls.py | ![healthifyzone / urls.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-project-urls.py.png) | PASS |
+| healthifyzone / settings.py | ![healthifyzone / settings.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-project-settings.py.png) | PASS | 
+| users app / admin.py | ![users app / admin.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-admin.py.png) | PASS |
+| users app / forms.py | ![users app / forms.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-forms.py.png) | PASS |
+| users app / models.py | ![users app / models.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-models.py.png) | PASS |
+| users app / urls.py | ![users app / urls.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-urls.py.png) | PASS |
+| users app / views.py | ![users app / views.py](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-views.py.png) | PASS |
 
 ## **Browser Compatibility**
+
+| Browser | Screenshot | PASS/FAIL |
+| --- | --- | --- |
+| Google Chrome | ![Google Chrome](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/google_chrome.png) | PASS |
+| Mozilla Firefox | ![Mozilla Firefox](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/mozilla.png) | PASS |
+| Microsoft Edge | ![Microsoft Edge](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/microsoft_edge.jpeg) | PASS |
 
 
 
