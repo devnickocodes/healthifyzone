@@ -39,3 +39,10 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 ## **JavaScript Validation**
 | JS File | Screenshot | PASS/FAIL |
 | --- | --- | --- |
+| ajax_article_likes.js | ![ajax_article_likes.js](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/ajax_article_likes.js-validation.png) | PASS |
+| ajax_comment_likes.js | ![ajax_comment_likes.js](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/ajax_comment_likes.js-validation.png) | PASS |
+| check_image_size_create_article.js | ![check_image_size_create_article.js](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/check_image_size_create_article.js_validation.png) | PASS |
+| check_image_size_edit_article.js | ![check_image_size_edit_article.js](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/check_image_size_edit_article.js_validation.png) | PASS |
+| check_image_size_profile_update.js | ![check_image_size_profile_update.js](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/check_image_size_profile_update.js_validation.png) | PASS |
+| comments.js | ![comments.js](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/comments.js-validation.png) | PASS |
+| messages_timeout.js | ![messages_timeout.js](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/messages_timeout.js-validation.png) | PASS |
