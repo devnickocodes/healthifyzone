@@ -61,5 +61,8 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 | recipe app / views.py   | ![recipe app / views.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-recipe-views.py.png) | PASS |
 | healthifyzone / urls.py   | ![healthifyzone / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-project-urls.py.png) | PASS |
 | healthifyzone / settings.py   | ![healthifyzone / settings.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-project-settings.py.png) | PASS |
-
-
+| users app / admin.py   | ![users app / admin.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-admin.py.png) | PASS |
+| users app / forms.py   | ![users app / forms.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-forms.py.png) | PASS |
+| users app / models.py   | ![users app / models.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-models.py.png) | PASS |
+| users app / urls.py   | ![users app / urls.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-urls.py.png) | PASS |
+| users app / views.py   | ![users app / views.py ](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/pep8-validator-users-views.py.png) | PASS |
