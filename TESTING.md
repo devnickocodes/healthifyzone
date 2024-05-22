@@ -79,3 +79,4 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 ## **Responsiveness**
 | Device | Screenshot | PASS/FAIL |
 | --- | --- | --- |
+| Desktop | ![Desktop](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/google_chrome.png) | PASS |
