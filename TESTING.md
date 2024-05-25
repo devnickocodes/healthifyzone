@@ -126,6 +126,8 @@ There was ongoing testing throughout the whole development of the website. I was
 | Homepage | Edit Article Button | When a user is logged in and is the author of an article they will see an "Edit Article" button which when clicked will take the user to a  page where the user can update/ edit the article | PASS |
 | Homepage | Pagination Buttons | When the user clicks on the "NEXT" button they will be taken to the next page | PASS |
 | Homepage | Pagination Buttons | When the user clicks on the "PREV" button they will be taken to the previous page | PASS |
-
+| Category Page | "View Category" Button | When the user clicks on the "View Category" button they will be taken to a page with all the articles related to the chosen category | PASS |
+| Category Page | Category Author Profile Link | When a user that is not logged in clicks on the author profile link in the category card they will be redirected to the log in page | PASS |
+| Category Page | Category Author Profile Link | When a user that is logged in and clicks on the author profile link in the category card they will be redirected to the profile page of the author | PASS |
 
 
