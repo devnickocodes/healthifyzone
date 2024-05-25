@@ -133,3 +133,13 @@ There was ongoing testing throughout the whole development of the website. I was
 | Recipe Search Page | Input Field and "Search" Button | Input a word and click on the "Search" button and if recipes cannot be found a blank page will be shown | PASS |
 | Recipe Search Results Page | "View Recipe" | When a user clicks on the button they will be taken to the recipe's individual page | PASS |
 | Individual Recipe Page | "View Instructions" | When a user clicks on the dropdown button the instructions for the recipe will be shown | PASS |
+| Sign Up Page | First Name Field | This field is not mandatory and the user can choose to skip it | PASS |
+| Sign Up Page | Last Name Field | This field is not mandatory and the user can choose to skip it | PASS |
+| Sign Up Page | Username Field | The username field accepts usernames that are more than 3 characters, less than 16 and ones that only contain letters, numbers, and underscores | PASS |
+| Sign Up Page | Password Field and Password Confirmation | Only accepts password format | PASS |
+| Sign Up Page | "Sign Up" Button | Create user accound and redirect to the homepage | PASS |
+| Sign Up Page | "Sign In" Button | Takes the user to the log in page | PASS |
+| Sign In Page | Username Field and Password Field | If the user inputs username and password that match the ones that they used during the sign up they will be logged in their account | PASS |
+| Sign In Page | "Remember Me" checkbox | When the user checks it, sends a cookie to the browser to allow automated login to take place | PASS |
+| Sign In Page | "Sign Up" link | When the user clicks on it they are redirected to the Sign Up page | PASS |
+| Sign In Page | "Reset It Here" link | When the user clicks on it they will be redirected to a page for a password reset | PASS |
