@@ -119,16 +119,30 @@ There was ongoing testing throughout the whole development of the website. I was
 | Homepage | Sign Up tab | When the user clicks on the Sign Up tab they are redirected to the Sign Up page where they can create an account | PASS |
 | Homepage | Log In tab | When the user clicks on the Log In tab they are redirected to the Log In page where they can log in to their account | PASS |
 | Homepage | Footer | When the user clicks on the GitHub icon they are redirected to the GitHub page of the developer | PASS |
-| Homepage | Article Author Profile Link | When a user that is not logged in clicks on the author profile link in the article card they will be redirected to the log in page | PASS |
-| Homepage | Article Author Profile Link | When a user that is logged in and clicks on the author profile link in the article card they will be redirected to the profile page of the author | PASS |
+| Homepage | Article Author Profile Link | When a user is not logged in clicks on the author profile link in the article card they will be redirected to the log in page | PASS |
+| Homepage | Article Author Profile Link | When a user is logged in and clicks on the author profile link in the article card they will be redirected to the profile page of the author | PASS |
 | Homepage | View Article Button | When a user clicks on the "View Article" button they will be redirected to the individual page for the article | PASS |
 | Homepage | Delete Article Button | When a user is logged in and is the author of an article they will see a "Delete Article" button which when clicked will take the user to a delete confirmation page | PASS |
 | Homepage | Edit Article Button | When a user is logged in and is the author of an article they will see an "Edit Article" button which when clicked will take the user to a  page where the user can update/ edit the article | PASS |
 | Homepage | Pagination Buttons | When the user clicks on the "NEXT" button they will be taken to the next page | PASS |
 | Homepage | Pagination Buttons | When the user clicks on the "PREV" button they will be taken to the previous page | PASS |
+| Individual Article Page | Article Author Profile Link | When a user is not logged in clicks on the author profile link on the article page they will be redirected to the log in page | PASS |
+| Individual Article Page | Article Author Profile Link | When a user is logged in and clicks on the author profile link on the article page they will be redirected to the profile page of the author | PASS |
+| Individual Article Page | Comment Author Profile Link | When a user is not logged in clicks on the comment profile link in the comment section they will be redirected to the log in page | PASS |
+| Individual Article Page | Comment Author Profile Link | When a user is logged in and clicks on the comment profile link in the comment section they will be redirected to the profile page of the author | PASS |
+| Individual Article Page | Like Button (article) | When a user that is not logged in clicks on the heart they will be notified that they need to sign up or log in, in order to like an article | PASS |
+| Individual Article Page | Like Button (article) | When a user that is logged in clicks on the heart, it will change color and increase the likes by 1 | PASS |
+| Individual Article Page | Like Button (comment) | When a user that is not logged in clicks on the heart they will be notified that they need to sign up or log in, in order to like a comment | PASS |
+| Individual Article Page | Like Button (comment) | When a user that is logged in clicks on the heart, it will change color and increase the likes by 1 | PASS |
+| Individual Article Page | "Leave a Comment" Button | When a user that is not logged in clicks on the "Leave a Comment" button they will be notified that they need to sign up or log in, in order to leave a comment | PASS |
+| Individual Article Page | "Leave a Comment" Button | When a user that is logged in clicks on the "Leave a Comment" button, they can fill in the form and submit it for approval | PASS |
+| Individual Article Page | "Delete" button | For the logged in admin there is a delete button on each comment and when clicked there is a confirmation model that shows up and when the admin clicks "Delete" the comment is deleted | PASS |
+| Individual Article Page | "Delete" button | For the logged in author of the comment there is a "Delete" button and when clicked there is a confirmation model that shows up and when the user clicks "Delete" the comment is deleted | PASS |
+| Individual Article Page | "Edit" button | For the logged in author of the comment there is a "Edit" button and when clicked the form for leaving comments will populate with the contents of the commen so the user can edit and when they click "Submit" the comment will be sent for approval | PASS |
+| Individual Article Page | Comment | When a user leaves a comment, it is sent out for approval and until it is approved only they can see it with a paragraph saying "This comment is awaiting approval" | PASS |
 | Category Page | "View Category" Button | When the user clicks on the "View Category" button they will be taken to a page with all the articles related to the chosen category | PASS |
-| Category Page | Category Author Profile Link | When a user that is not logged in clicks on the author profile link in the category card they will be redirected to the log in page | PASS |
-| Category Page | Category Author Profile Link | When a user that is logged in and clicks on the author profile link in the category card they will be redirected to the profile page of the author | PASS |
+| Category Page | Category Author Profile Link | When a user is not logged in clicks on the author profile link in the category card they will be redirected to the log in page | PASS |
+| Category Page | Category Author Profile Link | When a user is logged in and clicks on the author profile link in the category card they will be redirected to the profile page of the author | PASS |
 | Recipe Search Page | Input Field and "Search" Button | Input a word and click on the "Search" button and if recipes can be found the user will be redirected to the Recipe Results Page | PASS |
 | Recipe Search Page | Input Field and "Search" Button | Input a word and click on the "Search" button and if recipes cannot be found a blank page will be shown | PASS |
 | Recipe Search Results Page | "View Recipe" | When a user clicks on the button they will be taken to the recipe's individual page | PASS |
