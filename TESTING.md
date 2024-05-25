@@ -106,8 +106,26 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 | Password Reset Email Opened Page | ![Password Reset Email Opened Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/password_reset_email_opened_lighthouse.png) | PASS |
 | Password Reset Done Page | ![Password Reset Done Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/password_reset_done_lighthouse.png) | PASS |
 
+## **Manual Testing**
 
+There was ongoing testing throughout the whole development of the website. I was using the Google Developer Tools to troubleshoot issues as well as performing early deployments to see if everything on the website was functioning the way it was expected.
 
+| Page | Feature | Expected Outcome | PASS/FAIL |
+| --- | --- | --- | --- |
+| Homepage | Logo | When the user clicks on the logo they are redirected to the homepage | PASS |
+| Homepage | Home tab | When the user clicks on the Home tab they are redirected to the homepage | PASS |
+| Homepage | Category tab | When the user clicks on the Category tab they are redirected to the Category page | PASS |
+| Homepage | Recipes tab | When the user clicks on the Recipes tab they are redirected to the Recipes page where they can search for a recipe | PASS |
+| Homepage | Sign Up tab | When the user clicks on the Sign Up tab they are redirected to the Sign Up page where they can create an account | PASS |
+| Homepage | Log In tab | When the user clicks on the Log In tab they are redirected to the Log In page where they can log in to their account | PASS |
+| Homepage | Footer | When the user clicks on the GitHub icon they are redirected to the GitHub page of the developer | PASS |
+| Homepage | Article Author Profile Link | When a user that is not logged in clicks on the author profile link in the article card they will be redirected to the log in page | PASS |
+| Homepage | Article Author Profile Link | When a user that is logged in and clicks on the author profile link in the article card they will be redirected to the profile page of the author | PASS |
+| Homepage | View Article Button | When a user clicks on the "View Article" button they will be redirected to the individual page for the article | PASS |
+| Homepage | Delete Article Button | When a user is logged in and is the author of an article they will see a "Delete Article" button which when clicked will take the user to a delete confirmation page | PASS |
+| Homepage | Edit Article Button | When a user is logged in and is the author of an article they will see an "Edit Article" button which when clicked will take the user to a  page where the user can update/ edit the article | PASS |
+| Homepage | Pagination Buttons | When the user clicks on the "NEXT" button they will be taken to the next page | PASS |
+| Homepage | Pagination Buttons | When the user clicks on the "PREV" button they will be taken to the previous page | PASS |
 
 
 
