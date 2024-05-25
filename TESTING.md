@@ -129,5 +129,7 @@ There was ongoing testing throughout the whole development of the website. I was
 | Category Page | "View Category" Button | When the user clicks on the "View Category" button they will be taken to a page with all the articles related to the chosen category | PASS |
 | Category Page | Category Author Profile Link | When a user that is not logged in clicks on the author profile link in the category card they will be redirected to the log in page | PASS |
 | Category Page | Category Author Profile Link | When a user that is logged in and clicks on the author profile link in the category card they will be redirected to the profile page of the author | PASS |
-
-
+| Recipe Search Page | Input Field and "Search" Button | Input a word and click on the "Search" button and if recipes can be found the user will be redirected to the Recipe Results Page | PASS |
+| Recipe Search Page | Input Field and "Search" Button | Input a word and click on the "Search" button and if recipes cannot be found a blank page will be shown | PASS |
+| Recipe Search Results Page | "View Recipe" | When a user clicks on the button they will be taken to the recipe's individual page | PASS |
+| Individual Recipe Page | "View Instructions" | When a user clicks on the dropdown button the instructions for the recipe will be shown | PASS |
