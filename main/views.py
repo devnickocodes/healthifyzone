@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
-from django.http import HttpResponseForbidden
+from django.core.exceptions import PermissionDenied
 from .models import Article, Category, Comment
 from .forms import ArticleForm, CommentForm
 
@@ -311,7 +311,7 @@ def delete_article(request, article_slug):
     """
     article = get_object_or_404(Article, article_slug=article_slug)
     if article.article_author != request.user:
-        return HttpResponseForbidden()
+        raise PermissionDenied
 
     if request.method == 'POST':
         article.delete()
@@ -331,7 +331,7 @@ def edit_article(request, article_slug):
     """
     article = get_object_or_404(Article, article_slug=article_slug)
     if article.article_author != request.user:
-        return HttpResponseForbidden()
+        raise PermissionDenied
 
     if request.method == 'POST':
         form = ArticleForm(request.POST, request.FILES, instance=article)

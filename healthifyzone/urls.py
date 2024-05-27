@@ -43,10 +43,6 @@ def custom_500(request):
     return render(request, '500.html', status=500)
 
 
-handler404 = 'healthifyzone.urls.custom_404'
-handler403 = 'healthifyzone.urls.custom_403'
-handler500 = 'healthifyzone.urls.custom_500'
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
@@ -66,3 +62,7 @@ urlpatterns = [
     path('', include('recipes.urls')),
     path('', include('main.urls')),
 ]
+
+handler404 = 'healthifyzone.urls.custom_404'
+handler403 = 'healthifyzone.urls.custom_403'
+handler500 = 'healthifyzone.urls.custom_500'
