@@ -157,3 +157,23 @@ There was ongoing testing throughout the whole development of the website. I was
 | Sign In Page | "Remember Me" checkbox | When the user checks it, sends a cookie to the browser to allow automated login to take place | PASS |
 | Sign In Page | "Sign Up" link | When the user clicks on it they are redirected to the Sign Up page | PASS |
 | Sign In Page | "Reset It Here" link | When the user clicks on it they will be redirected to a page for a password reset | PASS |
+| Profile Page | "Create Article" Button | When the user clicks on the button they will be taken to the create article page | PASS |
+| Profile Page | "Settings" Button | When the user clicks on the dropdown button a profile update form shows up | PASS |
+| Profile Page | Profile Update Form First Name Field | The user can choose to add a first name or not | PASS |
+| Profile Page | Profile Update Form Last Name Field | The user can choose to add a last name or not | PASS |
+| Profile Page | Profile Update Form Bio Field | The user can choose to add a bio or not | PASS |
+| Profile Page | Profile Update Form Status Field | The user can choose to change their status or not | PASS |
+| Profile Page | Profile Update Form Image Field | The user can choose to change their status or not | PASS |
+| Profile Page | Profile Update Form Image Field | If the user tried to upload an image larger than 900KB they will be shown a message saying "The selected image file is too large. Please select an image file less than 900KB." | PASS |
+| Create Article / Edit Article Page | Create Article/Edit Form Title Field | The user can choose a unique title for their article and if the title alread exists the user will be notified | PASS |
+| Create Article / Edit Article Page | Create Article/Edit Form Subtitle Field | The user can choose a subtitle for their article | PASS |
+| Create Article / Edit Article Page | Create Article/Edit Form Content Field | The user can choose a content for their article | PASS |
+| Create Article / Edit Article Page | Create Article/Edit Form Category Field | The user can choose one category for their article | PASS |
+| Create Article / Edit Article Page | Create Article/Edit Form Image Field | If the user doesn't choose an image, a plaholder image will be assigned for the article | PASS |
+| Create Article / Edit Article Page | Create Article/Edit Form Image Field | If the user tried to upload an image larger than 900KB they will be shown a message saying "The selected image file is too large. Please select an image file less than 900KB." | PASS |
+
+
+
+
+
+
