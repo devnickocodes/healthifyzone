@@ -429,6 +429,9 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![Log In Page Sign Up Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/log_in_page_sign_up_link.png)
 
+
+
+
 ## **Future Features**
 
 - The following are things that I would like to add in the future:
