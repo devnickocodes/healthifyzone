@@ -175,7 +175,6 @@ There was ongoing testing throughout the whole development of the website. I was
 
 ## **Automated Testing**
 
+I utilized Django's TestCase framework to execute a total of 12 automated tests. These tests were implemented to test some of the functionality within the project. While these initial tests provided valuable insights, there remains a scope for conducting further testing to comprehensively validate the application's behavior.
 
-
-
-
+![Automated Testing](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/automated_testing.png)
