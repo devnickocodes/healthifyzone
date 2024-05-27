@@ -431,7 +431,12 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 - **Error Pages**
 
-    - If a user lands on a page that they don't have access to or doesn't exist they will be taken to an error page with the option to go back to the homepage.
+    - If a user lands on a page that they don't have access to (trying to delete an article with a link) or doesn't exist (searching for a non existing profile) they will be taken to an error page with the option to go back to the homepage.
+
+![403 Error Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/403_page.png)
+![404 Error Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/404_page.png)
+![500 Error Page](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/500_page.png)
+
 
 ## **Future Features**
 
