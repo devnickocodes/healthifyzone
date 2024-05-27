@@ -429,8 +429,9 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![Log In Page Sign Up Link](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/log_in_page_sign_up_link.png)
 
+- **Error Pages**
 
-
+    - If a user lands on a page that they don't have access to or doesn't exist they will be taken to an error page with the option to go back to the homepage.
 
 ## **Future Features**
 

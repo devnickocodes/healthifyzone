@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
+from django.http import HttpResponseForbidden
 from .models import Article, Category, Comment
 from .forms import ArticleForm, CommentForm
 
@@ -309,9 +310,13 @@ def delete_article(request, article_slug):
     :template:`main/delete_article.html`
     """
     article = get_object_or_404(Article, article_slug=article_slug)
+    if article.article_author != request.user:
+        return HttpResponseForbidden()
+
     if request.method == 'POST':
         article.delete()
         return HttpResponseRedirect(reverse('homepage'))
+
     return render(request, 'main/delete_article.html', {'article': article})
 
 
@@ -325,6 +330,9 @@ def edit_article(request, article_slug):
     :template:`main/edit_article.html`
     """
     article = get_object_or_404(Article, article_slug=article_slug)
+    if article.article_author != request.user:
+        return HttpResponseForbidden()
+
     if request.method == 'POST':
         form = ArticleForm(request.POST, request.FILES, instance=article)
         if form.is_valid() and article.article_author == request.user:
