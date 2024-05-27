@@ -315,6 +315,7 @@ def delete_article(request, article_slug):
 
     if request.method == 'POST':
         article.delete()
+        messages.success(request, 'Article has been successfully deleted.')
         return HttpResponseRedirect(reverse('homepage'))
 
     return render(request, 'main/delete_article.html', {'article': article})

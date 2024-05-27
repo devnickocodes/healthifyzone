@@ -171,6 +171,8 @@ There was ongoing testing throughout the whole development of the website. I was
 | Create Article / Edit Article Page | Create Article/Edit Form Category Field | The user can choose one category for their article | PASS |
 | Create Article / Edit Article Page | Create Article/Edit Form Image Field | If the user doesn't choose an image, a plaholder image will be assigned for the article | PASS |
 | Create Article / Edit Article Page | Create Article/Edit Form Image Field | If the user tried to upload an image larger than 900KB they will be shown a message saying "The selected image file is too large. Please select an image file less than 900KB." | PASS |
+| Delete Article Page | "Delete" Button | When the user clicks on the delete button the article is deleted. | PASS |
+
 
 
 
