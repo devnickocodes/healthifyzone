@@ -36,7 +36,8 @@ DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-devnickocodes-healthifyz-x331i3shha.us1.codeanyapp.com',
-    '.herokuapp.com'
+    '.herokuapp.com',
+    'ui.dev'
 ]
 
 
