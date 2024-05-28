@@ -334,12 +334,6 @@ The wireframes were created with [Balsamiq's Website](https://balsamiq.com/).
 
 ![View Recipe Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_recipe_button.png)
 
-- **View Recipe Button**
-
-    - For each one of the recipes there will be a "View Recipe" button that when clicked the user will be taken to a page that will contain more information about the recipe.
-
-![View Recipe Button](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/view_recipe_button.png)
-
 - **Recipe Card Page**
 
     - Upon clicking on the "View Recipe" button the user will be taken to this page where they will find all the information about the recipe.
