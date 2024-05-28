@@ -39,13 +39,11 @@ h2{
 
 .header,
 .reg-header,
-.reset-pass-header{
+.reset-pass-header {
     border-radius: 0% 0% 50% 50%;
     background-color: rgb(82, 153, 41);
     color: rgb(255, 255, 255);
-    -webkit-box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
-    -moz-box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
-    box-shadow: 10px 11px 11px -8px rgba(30,70,7,1);
+    box-shadow: 10px 11px 11px -8px rgba(30, 70, 7, 1);
 }
 
 .reg-header{
