@@ -35,7 +35,6 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 ## **CSS Validation**
 
 
-
 ## **JavaScript Validation**
 
 | JS File | Screenshot | PASS/FAIL |
