@@ -34,6 +34,9 @@ For these pages I have extracted the code by right-clicking on the pages that ne
 
 ## **CSS Validation**
 
+The CSS code passed the validation, there are a couple of warnings that have to do with the buttons accross the website about the same color being applied for background-color and borders, but since there is a :hover pseudo-class, when the border color is removed there is a change in the behavior of the buttons when hovered.
+
+![CSS Validation](https://github.com/devnickocodes/healthifyzone/blob/main/documentation/css_validation.png)
 
 ## **JavaScript Validation**
 
